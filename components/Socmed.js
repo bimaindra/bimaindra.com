@@ -3,16 +3,16 @@ const Socmed = () => {
         <div>
             <ul className="u-list">
                 <li className="u-list__item">
-                    <a className="u-link" href="mailto:bimaindramulya@gmail.com"><img src="envelope-solid.svg" className="u-icon u-icon__hovered" /></a>
+                    <a className="u-link" href="mailto:bimaindramulya@gmail.com"><img src="./cdn/icons/envelope-solid.svg" className="u-icon u-icon__hovered" /></a>
                 </li>
                 <li className="u-list__item">
-                    <a className="u-link" href="http://linkedin.com/in/bimaindra" target="_blank"><img src="linkedin-brands.svg" className="u-icon u-icon__hovered" /></a>
+                    <a className="u-link" href="http://linkedin.com/in/bimaindra" target="_blank"><img src="./cdn/icons/linkedin-brands.svg" className="u-icon u-icon__hovered" /></a>
                 </li>
                 <li className="u-list__item">
-                    <a className="u-link" href="http://instagram.com/bimaindraa" target="_blank"><img src="instagram-square-brands.svg" className="u-icon u-icon__hovered" /></a>
+                    <a className="u-link" href="http://instagram.com/bimaindraa" target="_blank"><img src="./cdn/icons/instagram-square-brands.svg" className="u-icon u-icon__hovered" /></a>
                 </li>
                 <li className="u-list__item">
-                    <a className="u-link" href="http://twitter.com/bimaindraa" target="_blank"><img src="twitter-square-brands.svg" className="u-icon u-icon__hovered" /></a>
+                    <a className="u-link" href="http://twitter.com/bimaindraa" target="_blank"><img src="./cdn/icons/twitter-square-brands.svg" className="u-icon u-icon__hovered" /></a>
                 </li>
             </ul>
             <style jsx>{`

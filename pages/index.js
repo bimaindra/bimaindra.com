@@ -5,7 +5,7 @@ export default function Home() {
   return (
       <Layout>
         <div className="card">
-          <h1 className="card__title">My site is getting a little tune up and some love.</h1>
+          <h1 className="card__title ">My site is getting a little tune up and some love.</h1>
           <p>Scheduled maintenance is currently in progress.</p>
           <p>I'll be back soon!</p>
           <p>&mdash; <b>Bima Indra</b></p>
@@ -28,6 +28,7 @@ export default function Home() {
 
           .card__title {
             font-size: 40px;
+            margin-top: 0;
           }
 
           @media (min-width:768px) {
