@@ -1,12 +1,9 @@
 import Header from './Header';
-
-const Style = {
-    padding: 1 + "rem"
-}
+import css from '../public/scss/style.scss';
 
 const Layout = props => {
     return (
-        <main className="main-wrapper" style={Style}>
+        <main className={css.wrapper}>
             <Header />
             {props.children}
         </main>

@@ -1,0 +1,82 @@
+body {
+	font-family: 'Inconsolata', monospace;
+	font-size: 1.25rem;
+	color: #333;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: #34495e;
+	text-decoration: none;
+
+	&:hover {
+		color: #333;
+		text-decoration: none;
+	}
+}
+
+.wrapper {
+	padding: 1rem;
+}
+
+.card {
+	margin: auto;
+
+	&__title {
+		font-size: 40px;
+		margin-top: 0;
+	}
+}
+
+.u-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	>li {
+		display: inline-block;
+		list-style: none;
+		vertical-align: top;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+
+.u-link {
+	display: inline-block;
+}
+
+.u-icon {
+	width: 25px;
+	height: 25px;
+
+	&__hovered {
+		position: relative;
+		transition: transform .25s ease-out;
+
+		&:hover {
+			transform: translateY(-3px)
+		}
+	}
+}
+
+@media (min-width:768px) {
+	.card {
+		width: 650px;
+	}
+}
+
+@media (max-width: 767px) {
+	.card__title {
+		font-size: 1.5rem;
+	}
+}
