@@ -3,12 +3,14 @@ import Head from 'next/head';
 const Header = () => {
     return (
         <Head>
-            <title>Bima Indra Mulya | Front End Engineer</title>
             <meta charset="UTF-8" />
-            <meta name="description" content="I'am Bima Indra Mulya. Indonesian who loves sport, travel, and tech. Liked cheesy jokes sometimes, and been around 4 years working as a Front End Engineer." />
-            <meta name="keywords" content="Front End Engineer, Front End Developer, Software Engineer, Indonesia, Jakarta" />
-            <meta name="author" content="John Doe" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <title>Bima Indra Mulya | Front End Engineer</title>
+            <meta name="description" content="I'am Bima Indra Mulya. Indonesian who loves sport, travel, and tech. Liked cheesy jokes sometimes, and been around 4 years working as a Front End Engineer." />
+            <meta name="keywords" content="Front End Engineer, Front End Developer, Software Engineer, Jakarta, Indonesia" />
+            <meta name="author" content="Bima Indra Mulya" />
+            <meta property="og:locale" content="en_US" />
+            <meta property="og:type" content="website" />
             <meta property="og:title" content="Bima Indra Mulya | Front End Engineer" />
             <meta property="og:description" content="I'am Bima Indra Mulya. Indonesian who loves sport, travel, and tech. Liked cheesy jokes sometimes, and been around 4 years working as a Front End Engineer." />
             <meta property="og:url" content="https://bimaindra.com" />
