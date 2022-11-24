@@ -57,7 +57,7 @@ export default function Home() {
 	return (
 		<>
 			<Hero link="#timeline" gtm="hero-button-know-more" />
-			<section id="timeline" className="u-safe-area relative bg-slate-100">
+			<section id="timeline" className="u-safe-area relative bg-slate-100 dark:bg-slate-700">
 				<div className="container">
 					<div className="mx-auto lg:w-2/4">
 						<div className="mb-10">

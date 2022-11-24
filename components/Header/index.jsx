@@ -41,7 +41,7 @@ const Header = () => {
 							<li key={index}>
 								<Link
 									href={linkItem.href}
-									className={`u-link-underline u-link-underline-black block rounded text-sm font-medium text-gray-700 transition-colors dark:text-gray-400 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white ${
+									className={`u-link-underline u-link-underline-black block rounded text-sm font-medium text-gray-700 transition-colors dark:text-gray-400 dark:hover:text-gray-400 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-gray-400 ${
 										linkItem.active ? 'active text-blue-700' : ''
 									}`}>
 									{linkItem.name}
