@@ -2,6 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	scroll-behavior: smooth;
+}
+
 main {
-	min-height: 100vh;
+	min-height: calc(100vh - 56px);
+	padding-top: 56px;
+}
+
+.container {
+	@apply px-4 lg:px-0;
+}
+
+.u-safe-area {
+	@apply py-10 sm:py-16 lg:py-20;
+}
+
+.u-link-underline {
+	border-bottom-width: 0;
+	background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+	background-size: 0 3px;
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size 0.15s ease-in-out;
+}
+
+.u-link-underline-black {
+	background-image: linear-gradient(transparent, transparent), linear-gradient(#2563eb, #2563eb);
+}
+
+.u-link-underline.active,
+.u-link-underline:hover {
+	background-size: 100% 3px;
+	background-position: 0 100%;
+}
+
+.emoji-hand {
+	animation: 5s ease-in-out 1s hands infinite;
+}
+
+@keyframes hands {
+	0% {
+		transform: rotate(0);
+	}
+	5% {
+		transform: rotate(16deg);
+	}
+	10% {
+		transform: rotate(-16deg);
+	}
+	15% {
+		transform: rotate(16deg);
+	}
+	20% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(0);
+	}
 }
