@@ -5,7 +5,7 @@ import Script from 'next/script';
 import '../styles/globals.css';
 import { Montserrat } from '@next/font/google';
 import Layout from '../components/Layout';
-import { GTM_ID, pageview } from './lib/gtm';
+import { GTM_ID, pageview } from '../lib/gtm';
 
 const montserrat = Montserrat({
 	subsets: ['latin'],
