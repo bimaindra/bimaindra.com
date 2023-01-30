@@ -1,0 +1,27 @@
+{
+	"name": "Bima",
+	"fullname": "Bima Indra Mulya",
+	"dateBirth": "July 20, 1995",
+	"placeBirth": "Sidoarjo",
+	"description": "My name is Bima. I’m an Indonesian who loves sports, traveling and technology. Also, interested in cheesy jokes sometimes. I have been around 5+ years working as a Web Front End Engineer leveraging CSS and JavaScript to build responsive websites and interactive features that drive business growth and improve UX.",
+	"excerpt": "Web Front End Engineer from Indonesia.",
+	"job": "Web Front End Engineer",
+	"hobby": ["badminton", "travelling"],
+	"interest": ["photography", ""],
+	"stacks": ["Javascript", "ReactJS", "NextJS", "TailwindCSS"],
+	"links": [
+		{
+			"name": "twitter",
+			"url": "https://twitter.com/bimaindraa"
+		},
+		{
+			"name": "linkedin",
+			"url": "https://linkedin.com/in/bimaindra"
+		},
+		{
+			"name": "github",
+			"url": "https://github.com/wongdarjo"
+		}
+	],
+	"email": "bimaindramulya@gmail.com"
+}

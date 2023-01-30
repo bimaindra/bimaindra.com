@@ -2,14 +2,32 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Script from 'next/script';
-import '../styles/globals.css';
-import { Montserrat } from '@next/font/google';
+import '../assets/styles/globals.css';
+import localFont from '@next/font/local';
 import Layout from '../components/Layout';
 import { GTM_ID, pageview } from '../lib/gtm';
 
-const montserrat = Montserrat({
-	subsets: ['latin'],
-	variable: '--font-body',
+const defaultFont = localFont({
+	src: [
+		{
+			path: '../assets/fonts/wotfard-regular.woff2',
+			weight: '400',
+			variable: '--font-default',
+			fallback: ['system-ui', 'arial'],
+		},
+		{
+			path: '../assets/fonts/wotfard-medium.woff2',
+			weight: '500',
+			variable: '--font-medium',
+			fallback: ['system-ui', 'arial'],
+		},
+		{
+			path: '../assets/fonts/wotfard-semibold.woff2',
+			weight: '600',
+			variable: '--font-title',
+			fallback: ['system-ui', 'arial'],
+		},
+	],
 });
 
 function MyApp({ Component, pageProps }) {
@@ -46,7 +64,7 @@ function MyApp({ Component, pageProps }) {
           `,
 				}}
 			/>
-			<div className={`${montserrat.variable} font-sans text-gray-700`}>
+			<div className={`${defaultFont.className} bg-slate-100 text-wd-dark dark:bg-slate-600 dark:text-wd-light`}>
 				<Layout>
 					<Component {...pageProps} />
 				</Layout>

@@ -1,0 +1,51 @@
+[
+	{
+		"title": "Gojek Indonesia",
+		"location": "Jakarta, Indonesia",
+		"description": "Web Front End Developer",
+		"date": "Nov 2019 - Present",
+		"type": "jobs"
+	},
+	{
+		"title": "Tempo Scan Pacific",
+		"location": "Jakarta, Indonesia",
+		"description": "Digital Technical | Front End Developer",
+		"date": "Feb  2017 - Nov 2019",
+		"type": "jobs"
+	},
+	{
+		"title": "Gunadarma University",
+		"location": "Jakarta, Indonesia",
+		"description": "Graduate Bachelor of Computer Science",
+		"date": "Sep 2017",
+		"type": "education"
+	},
+	{
+		"title": "Bambu Digital",
+		"location": "Jakarta, Indonesia",
+		"description": "Jr. Front End Developer",
+		"date": "Aug 2015 - Feb 2017",
+		"type": "jobs"
+	},
+	{
+		"title": "Totalindo Rekayasa Telematika",
+		"location": "Jakarta, Indonesia",
+		"description": "IT Staff",
+		"date": "May 2013 - Apr 2015",
+		"type": "jobs"
+	},
+	{
+		"title": "SMK Telkom Malang",
+		"location": "Malang, Indonesia",
+		"description": "Graduate Senior High School",
+		"date": "Jul 2013",
+		"type": "education"
+	},
+	{
+		"title": "Telkomsel",
+		"location": "Jakarta, Indonesia",
+		"description": "Internship Progam",
+		"date": "Oct 2012 - Dec 2012",
+		"type": "jobs"
+	}
+]
