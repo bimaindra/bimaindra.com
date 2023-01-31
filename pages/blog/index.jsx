@@ -23,9 +23,9 @@ const Blog = (posts) => {
 			<Head>
 				<title>Blog | bimaindra.com</title>
 			</Head>
-			<h1 className="absolute top-1/2 left-0 right-0 -translate-y-1/2 text-center text-xl">
+			<div className="container">
 				<UnderDev />
-			</h1>
+			</div>
 		</>
 	);
 };

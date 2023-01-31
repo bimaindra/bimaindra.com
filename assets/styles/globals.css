@@ -52,9 +52,19 @@ a {
 	animation: 5s ease-out 1s hands infinite;
 }
 
+@screen xl {
+	.emoji-hand-disable-xl {
+		animation: none;
+	}
+}
+
 .c-header:hover .emoji-logo {
 	transform: scale(100%);
 	animation: 0.75s ease-out 0.25s logo;
+}
+
+.shadow-spread {
+	box-shadow: 0px -20px 24px 12px rgb(241 245 249 / 50%);
 }
 
 @keyframes hands {
@@ -62,13 +72,13 @@ a {
 		transform: rotate(0);
 	}
 	5% {
-		transform: rotate(16deg);
+		transform: rotate(8deg);
 	}
 	10% {
-		transform: rotate(-16deg);
+		transform: rotate(-8deg);
 	}
 	15% {
-		transform: rotate(16deg);
+		transform: rotate(8deg);
 	}
 	20% {
 		transform: rotate(0);
@@ -97,4 +107,16 @@ a {
 	100% {
 		transform: rotate(0);
 	}
+}
+
+.bg-pattern-triangle {
+	@apply bg-slate-500;
+	background-image: linear-gradient(-45deg, #f8fafc, #f8fafc 50%, #e2e8f0 50%, #e2e8f0);
+	background-size: 28px 28px;
+}
+
+.bg-pattern-polka {
+	@apply bg-slate-500;
+	background-image: radial-gradient(#1d4ed8 0.75px, #f8fafc 0.75px);
+	background-size: 20px 20px;
 }

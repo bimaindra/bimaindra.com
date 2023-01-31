@@ -7,8 +7,9 @@ const Works = () => {
 			<Head>
 				<title>Works | bimaindra.com</title>
 			</Head>
-			
+			<div className="container">
 				<UnderDev />
+			</div>
 		</>
 	);
 };
