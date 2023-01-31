@@ -64,7 +64,7 @@ function MyApp({ Component, pageProps }) {
           `,
 				}}
 			/>
-			<div className={`${defaultFont.className} bg-slate-100 text-wd-dark dark:bg-slate-600 dark:text-wd-light`}>
+			<div className={`${defaultFont.className} bg-slate-50 text-wd-dark dark:bg-slate-600 dark:text-wd-light`}>
 				<Layout>
 					<Component {...pageProps} />
 				</Layout>

@@ -1,12 +1,12 @@
 import { server } from '../config';
 import Hero from '../components/Hero';
 import Timeline from '../components/Timeline';
-import Button from '../components/Button';
+import dataTimeline from '../data/timeline.json';
 
 export default function Home({ timeline }) {
 	return (
-		<div>
-			<Hero link="#timeline" gtm="hero-button-know-more" />
+		<>
+			<Hero link="/about" gtm="hero-button-know-more" />
 			<section id="timeline" className="u-safe-area relative bg-slate-100 dark:bg-slate-700">
 				<div className="container">
 					<div className="mx-auto md:w-3/4 lg:w-2/4">
@@ -18,22 +18,17 @@ export default function Home({ timeline }) {
 							</h2>
 						</div>
 						<Timeline timeline={timeline} />
-						<div className="mt-12 md:mt-16">
-							<Button type="link" text="More Detail" href="/about" gtm="button-detail-linkedin" />
-						</div>
 					</div>
 				</div>
 			</section>
-		</div>
+		</>
 	);
 }
 
 export const getStaticProps = async () => {
-	const res = await fetch(`${server}/api/timeline`);
-	const timeline = await res.json();
 	return {
 		props: {
-			timeline,
+			timeline: dataTimeline,
 		},
 	};
 };

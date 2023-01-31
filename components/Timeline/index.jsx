@@ -1,14 +1,14 @@
-const Timeline = (props) => {
+const Timeline = ({ timeline }) => {
 	return (
 		<ol className="relative ml-4 border-l border-gray-200 dark:border-white">
-			{props.timeline.map((item, index) => {
+			{timeline.map((item, index) => {
 				return (
-					<li className="mb-10 ml-6 last:mb-0 lg:mb-14 lg:ml-8" key={index}>
-						<span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full ring-8 ring-slate-100 dark:ring-0 lg:-left-4 lg:h-8 lg:w-8">
+					<li className="mb-10 ml-6 last:mb-0 lg:mb-14 lg:ml-10" key={index}>
+						<span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 ring-8 ring-slate-200 dark:bg-transparent dark:ring-0 lg:-left-[14px] lg:h-7 lg:w-7">
 							{item.type === 'education' ? (
 								<>
 									<svg
-										className="h-6 w-6 fill-slate-700 dark:fill-slate-100 lg:h-8 lg:w-8"
+										className="h-6 w-6 fill-slate-700 dark:fill-slate-50 lg:h-7 lg:w-7"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 										xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@ const Timeline = (props) => {
 							) : (
 								<>
 									<svg
-										className="h-6 w-6 fill-slate-700 dark:fill-slate-100 lg:h-8 lg:w-8"
+										className="h-6 w-6 fill-slate-700 dark:fill-slate-50 lg:h-7 lg:w-7"
 										fill="currentColor"
 										viewBox="0 0 24 24"
 										xmlns="http://www.w3.org/2000/svg"
