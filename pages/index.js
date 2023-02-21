@@ -1,4 +1,3 @@
-import { server } from '../config';
 import Hero from '../components/Hero';
 import Timeline from '../components/Timeline';
 import dataTimeline from '../data/timeline.json';
