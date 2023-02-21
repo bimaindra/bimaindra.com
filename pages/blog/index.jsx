@@ -44,7 +44,9 @@ const Blog = (posts) => {
                     title={article.title}
                     author={article.author ? article.author.name : "Bima Indra"}
                     date={
-                      article.date ? article.date : formatDate("2019-05-27")
+                      article.date
+                        ? formatDate(article.date)
+                        : formatDate("2018-08-17")
                     }
                     description={
                       article.excerpt ? article.excerpt : article.body
