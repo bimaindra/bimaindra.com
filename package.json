@@ -9,7 +9,6 @@
 	},
 	"dependencies": {
 		"@next/font": "^13.0.5",
-		"@tryghost/content-api": "^1.11.4",
 		"framer-motion": "^8.5.5",
 		"graphql": "^16.6.0",
 		"graphql-request": "^5.1.0",
