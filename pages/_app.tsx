@@ -3,10 +3,10 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Script from "next/script";
-import "assets/styles/globals.css";
 import localFont from "@next/font/local";
 import Layout from "components/Layout";
 import { GTM_ID, pageview } from "lib/gtm";
+import "assets/styles/globals.css";
 
 const defaultFont = localFont({
   src: [
@@ -69,8 +69,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       />
       <div
-        className={`${defaultFont.className} bg-slate-50 text-wd-dark dark:bg-slate-600 dark:text-wd-light`}
-      >
+        className={`${defaultFont.className} bg-slate-50 text-wd-dark dark:bg-slate-600 dark:text-wd-light`}>
         <Layout>
           <Component {...pageProps} />
         </Layout>

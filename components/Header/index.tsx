@@ -69,8 +69,7 @@ const Header = () => {
                   href={linkItem.href}
                   className={`u-link-underline u-link-underline-black block rounded text-sm text-gray-700 transition-colors dark:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-gray-400 ${
                     linkItem.active ? "active text-blue-700" : ""
-                  }`}
-                >
+                  }`}>
                   {linkItem.name}
                 </Link>
               </li>

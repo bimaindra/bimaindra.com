@@ -34,8 +34,7 @@ const ArticleDetail = ({
                 strokeWidth={1.5}
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
+                aria-hidden="true">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -52,8 +51,7 @@ const ArticleDetail = ({
                 strokeWidth={1.5}
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
+                aria-hidden="true">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -66,8 +64,7 @@ const ArticleDetail = ({
           <div
             dangerouslySetInnerHTML={{
               __html: content,
-            }}
-          ></div>
+            }}></div>
         </div>
       </div>
     </section>

@@ -20,8 +20,7 @@ const BlogCard = ({
   return (
     <Link
       href={slug}
-      className="flex flex-col items-center rounded-lg border border-gray-200 bg-white shadow-lg transition duration-300 hover:bg-gray-100 hover:shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 md:flex-row"
-    >
+      className="flex flex-col items-center rounded-lg border border-gray-200 bg-white shadow-lg transition duration-300 hover:bg-gray-100 hover:shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 md:flex-row">
       {image && (
         <img
           className="aspect-video h-full w-full rounded-t-lg object-cover md:w-48 md:rounded-none md:rounded-l-lg"
@@ -46,8 +45,7 @@ const BlogCard = ({
                 strokeWidth={1.5}
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
+                aria-hidden="true">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -66,8 +64,7 @@ const BlogCard = ({
                 strokeWidth={1.5}
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
+                aria-hidden="true">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"

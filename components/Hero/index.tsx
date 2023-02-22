@@ -33,8 +33,7 @@ const Hero = ({ link, gtm }: HeroProps) => {
       <div
         className={`bg-pattern-${
           even ? "polka" : "polka"
-        } fixed top-14 bottom-auto left-0 right-0 w-full`}
-      >
+        } fixed top-14 bottom-auto left-0 right-0 w-full`}>
         <div className="grid min-h-[320px] place-items-center bg-slate-50 bg-opacity-10 text-center backdrop-blur-[3px] dark:bg-slate-600 dark:bg-opacity-40 md:min-h-[450px]">
           <div className="container">
             <h1 className="mb-4 flex items-center justify-center gap-x-4 text-3xl font-title md:text-4xl">
@@ -42,8 +41,7 @@ const Hero = ({ link, gtm }: HeroProps) => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
-                viewport={{ once: true }}
-              >
+                viewport={{ once: true }}>
                 <Image
                   src={waveEmoji}
                   alt="Hola!"
@@ -72,8 +70,7 @@ const Hero = ({ link, gtm }: HeroProps) => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 10 }}
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
               <Button type="link" text="More About" href={link} gtm={gtm} />
             </motion.div>
           </div>

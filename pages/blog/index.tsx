@@ -37,7 +37,7 @@ const Blog = (posts: InferGetStaticPropsType<typeof getStaticProps>) => {
               <h1>Blog</h1>
               <p>Mostly I used to write in Bahasa 🇮🇩.</p>
             </div>
-            <div className="mt-12 grid gap-6 md:gap-10">
+            <div className="mt-8 grid gap-6 md:gap-10 lg:mt-12">
               {articles.map((article: any) => {
                 return (
                   <BlogCard
