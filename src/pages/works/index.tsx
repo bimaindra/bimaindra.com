@@ -1,5 +1,5 @@
 import Head from "next/head";
-import UnderDev from "components/UnderDev";
+import UnderDev from "@/components/UnderDev";
 
 const Works = () => {
   return (
