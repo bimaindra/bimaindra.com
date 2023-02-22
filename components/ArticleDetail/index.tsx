@@ -1,4 +1,18 @@
-const ArticleDetail = ({ title, content, date, author, image }) => {
+type ArticleDetailProps = {
+  title: string;
+  content: string;
+  date: string;
+  author: string;
+  image?: string;
+};
+
+const ArticleDetail = ({
+  title,
+  content,
+  date,
+  author,
+  image,
+}: ArticleDetailProps) => {
   return (
     <section className="u-safe-area">
       <div className="container">

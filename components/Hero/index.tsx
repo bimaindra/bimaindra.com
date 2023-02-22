@@ -2,11 +2,16 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import Button from "../Button";
-import waveEmoji from "../../assets/images/waving-hand.png";
+import Button from "components/Button";
+import waveEmoji from "assets/images/waving-hand.png";
 
-const Hero = ({ link, gtm }) => {
-  const [even, setEven] = useState();
+type HeroProps = {
+  link: string;
+  gtm?: string;
+};
+
+const Hero = ({ link, gtm }: HeroProps) => {
+  const [even, setEven] = useState<boolean>();
 
   const getDate = () => {
     const date = new Date();

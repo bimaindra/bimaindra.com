@@ -1,19 +1,20 @@
+import { GetStaticProps, GetStaticPaths, InferGetStaticPropsType } from "next";
 import Head from "next/head";
-import { isDev } from "../../config";
-import { graphql, getAllSlugs, getPost } from "../../lib/query";
-import { formatDate } from "../../lib/constant";
-import ArticleDetail from "../../components/ArticleDetail";
+import { isDev } from "config";
+import { graphql, getAllSlugs, getPost } from "lib/query";
+import { formatDate } from "lib/constant";
+import ArticleDetail from "components/ArticleDetail";
 
 const QUERY_SLUG = getAllSlugs;
 const QUERY_POST = getPost;
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const { posts } = await graphql.request(QUERY_SLUG);
   const paths = isDev
-    ? posts.data.map((post) => ({
+    ? posts.data.map((post: any) => ({
         params: { slug: post.id },
       }))
-    : posts.map((post) => ({
+    : posts.map((post: any) => ({
         params: { slug: post.slug },
       }));
 
@@ -21,9 +22,11 @@ export async function getStaticPaths() {
     paths: paths,
     fallback: false,
   };
-}
+};
 
-export async function getStaticProps({ params }) {
+export const getStaticProps: GetStaticProps = async ({
+  params,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const slug = params.slug;
   const data = await graphql.request(QUERY_POST, { slug });
   const post = data.post;
@@ -38,9 +41,11 @@ export async function getStaticProps({ params }) {
     props: { post },
     revalidate: 3600,
   };
-}
+};
 
-const BlogDetail = ({ post }) => {
+const BlogDetail = ({
+  post,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Head>

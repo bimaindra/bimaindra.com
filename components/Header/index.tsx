@@ -29,7 +29,7 @@ const Header = () => {
   ];
 
   const headerAnimate = () => {
-    const header = document.querySelector(".c-header");
+    const header: any = document.querySelector(".c-header");
 
     window.addEventListener("scroll", () => {
       let scroll = window.scrollY;

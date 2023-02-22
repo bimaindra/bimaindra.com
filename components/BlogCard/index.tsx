@@ -1,6 +1,22 @@
 import Link from "next/link";
 
-const BlogCard = ({ title, description, image, date, slug, author }) => {
+type BlogCardProps = {
+  title: string;
+  description: string;
+  date: string;
+  slug: string;
+  author: string;
+  image?: string;
+};
+
+const BlogCard = ({
+  title,
+  description,
+  date,
+  slug,
+  author,
+  image,
+}: BlogCardProps) => {
   return (
     <Link
       href={slug}

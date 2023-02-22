@@ -1,4 +1,8 @@
-const Timeline = ({ timeline }) => {
+type TimelineProps = {
+  timeline: any[];
+};
+
+const Timeline = ({ timeline }: TimelineProps) => {
   return (
     <ol className="relative ml-4 border-l border-gray-200 dark:border-white">
       {timeline.map((item, index) => {

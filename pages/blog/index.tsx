@@ -1,12 +1,13 @@
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
-import { isDev } from "../../config";
-import { graphql, getAllPosts } from "../../lib/query";
-import { formatDate } from "../../lib/constant";
-import BlogCard from "../../components/BlogCard";
+import { isDev } from "config";
+import { graphql, getAllPosts } from "lib/query";
+import { formatDate } from "lib/constant";
+import BlogCard from "components/BlogCard";
 
 const QUERY_POSTS = getAllPosts;
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const { posts } = await graphql.request(QUERY_POSTS);
 
   if (!posts) {
@@ -19,9 +20,9 @@ export async function getStaticProps() {
     props: { posts },
     revalidate: 3600,
   };
-}
+};
 
-const Blog = (posts) => {
+const Blog = (posts: InferGetStaticPropsType<typeof getStaticProps>) => {
   const articles = isDev ? posts.posts.data : posts.posts;
 
   return (
@@ -37,7 +38,7 @@ const Blog = (posts) => {
               <p>Mostly I used to write in Bahasa 🇮🇩.</p>
             </div>
             <div className="mt-12 grid gap-6 md:gap-10">
-              {articles.map((article) => {
+              {articles.map((article: any) => {
                 return (
                   <BlogCard
                     key={article.id}
