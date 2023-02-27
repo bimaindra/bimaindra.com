@@ -2,7 +2,7 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import { isDev } from "@/lib/config";
 import { graphql, getAllPosts } from "@/lib/query";
-import { formatDate } from "@/lib/constant";
+import { formatDate } from "@/lib/helpers";
 import BlogCard from "@/components/BlogCard";
 
 const QUERY_POSTS = getAllPosts;
@@ -33,7 +33,7 @@ const Blog = (posts: InferGetStaticPropsType<typeof getStaticProps>) => {
       <section className="u-safe-area">
         <div className="container">
           <div className="mx-auto md:w-3/4 lg:w-1/2">
-            <div className="prose  dark:prose-invert  md:prose-base ">
+            <div className="prose dark:prose-invert md:prose-base ">
               <h1>Blog</h1>
               <p>Mostly I used to write in Bahasa 🇮🇩.</p>
             </div>

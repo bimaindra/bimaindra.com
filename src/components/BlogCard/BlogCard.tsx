@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { IconCalendar, IconPencil } from "../Icon";
-import { formatDate } from "@/lib/constant";
+import { formatDate } from "@/lib/helpers";
 
 type BlogCardProps = {
   title: string;
