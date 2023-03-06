@@ -29,11 +29,11 @@ const Hero = ({ link, gtm }: HeroProps) => {
   }, []);
 
   return (
-    <section className="relative min-h-[320px] md:min-h-[450px]">
+    <section className="relative -mt-16 min-h-[320px] md:min-h-[450px]">
       <div
         className={`bg-pattern-${
           even ? "polka" : "polka"
-        } fixed top-14 bottom-auto left-0 right-0 w-full`}>
+        } fixed bottom-auto left-0 right-0 w-full`}>
         <div className="grid min-h-[320px] place-items-center bg-slate-50 bg-opacity-10 text-center backdrop-blur-[3px] dark:bg-slate-600 dark:bg-opacity-80 md:min-h-[450px]">
           <div className="container">
             <h1 className="mb-4 flex items-center justify-center gap-x-4 text-3xl font-title md:text-4xl">

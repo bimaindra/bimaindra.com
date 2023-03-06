@@ -32,8 +32,8 @@ const Blog = (posts: InferGetStaticPropsType<typeof getStaticProps>) => {
       </Head>
       <section className="u-safe-area">
         <div className="container">
-          <div className="mx-auto md:w-3/4 lg:w-1/2">
-            <div className="prose dark:prose-invert md:prose-base ">
+          <div className="mx-auto md:max-w-screen-sm lg:max-w-screen-md">
+            <div className="prose dark:prose-invert md:prose-base">
               <h1>Blog</h1>
               <p>Mostly I used to write in Bahasa 🇮🇩.</p>
             </div>

@@ -18,7 +18,7 @@ const ArticleDetail = ({
   return (
     <section className="u-safe-area">
       <div className="container">
-        <div className="prose mx-auto dark:prose-invert md:prose-base md:w-3/4 lg:w-1/2">
+        <div className="prose mx-auto dark:prose-invert md:prose-base md:max-w-screen-sm lg:max-w-screen-md">
           {image && (
             <img
               className="aspect-video h-full w-full rounded-t-lg object-cover md:w-48 md:rounded-none md:rounded-l-lg"

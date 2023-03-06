@@ -16,7 +16,7 @@ const About = () => {
       </Head>
       <section className="u-safe-area">
         <div className="container">
-          <div className="prose mx-auto dark:prose-invert md:prose-base md:w-3/4 lg:w-1/2">
+          <div className="prose mx-auto dark:prose-invert md:prose-base md:max-w-screen-sm lg:max-w-screen-md">
             <h1>Hi! My name is Bima.</h1>
             <p>
               A Web Front End Engineer based in <em>Surabaya - Indonesia</em>{" "}
@@ -51,7 +51,34 @@ const About = () => {
                 😄 🙏🏻
               </small>
             </p>
-
+            <h2 className="decoration-slice underline decoration-dashed underline-offset-4">
+              Tech Stack
+            </h2>
+            <p>Daily use:</p>
+            <ul>
+              <li>
+                <Link href="https://reactjs.org/">ReactJS</Link> &{" "}
+                <Link href="https://nextjs.org/">NextJS</Link>
+              </li>
+              <li>
+                <Link href="https://www.typescriptlang.org/">TypeScript</Link>
+              </li>
+              <li>
+                <Link href="https://tailwindcss.com/">TailwindCSS</Link>
+              </li>
+            </ul>
+            <p>Deep dive learning:</p>
+            <ul>
+              <li>
+                <Link href="https://redux.js.org/">Redux</Link>
+              </li>
+              <li>
+                <Link href="https://graphql.org/">GraphQL</Link>
+              </li>
+              <li>
+                <Link href="https://www.framer.com/motion/">Framer Motion</Link>
+              </li>
+            </ul>
             <h2 className="decoration-slice underline decoration-dashed underline-offset-4">
               Ping me
             </h2>

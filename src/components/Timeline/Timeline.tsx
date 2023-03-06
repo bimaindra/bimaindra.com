@@ -1,16 +1,39 @@
+import { motion, Variants } from "framer-motion";
 import { IconCalendar, IconGraduate, IconLocation, IconWork } from "../Icon";
 
 type TimelineProps = {
   timeline: any[];
 };
 
+const cardVariants: Variants = {
+  offscreen: {
+    y: 120,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.5,
+      duration: 0.8,
+    },
+  },
+};
+
 const Timeline = ({ timeline }: TimelineProps) => {
   return (
-    <ol className="relative ml-4 border-l border-gray-200 dark:border-white">
+    <ol className="relative ml-4 whitespace-normal break-words border-l border-gray-200 dark:border-white">
       {timeline.map((item, index) => {
         return (
-          <li className="mb-12 ml-9 last:mb-0 lg:mb-16 lg:ml-10" key={index}>
-            <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 ring-8 ring-slate-200 dark:bg-transparent dark:ring-0 lg:-left-[14px] lg:h-7 lg:w-7">
+          <motion.li
+            key={index}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}
+            variants={cardVariants}
+            className="relative mb-12 ml-9 last:mb-0 lg:mb-16 lg:ml-10">
+            <span className="absolute -left-12 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 ring-8 ring-slate-200 dark:bg-transparent dark:ring-0 lg:-left-[56px] lg:h-7 lg:w-7">
               {item.type === "education" ? (
                 <>
                   <IconGraduate />
@@ -42,7 +65,7 @@ const Timeline = ({ timeline }: TimelineProps) => {
             <p className="mb-2 text-base text-gray-500 dark:text-slate-300">
               {item.description}
             </p>
-          </li>
+          </motion.li>
         );
       })}
     </ol>
