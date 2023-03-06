@@ -1,11 +1,11 @@
 import Head from "next/head";
 import UnderDev from "@/components/UnderDev";
 
-const Works = () => {
+const Work = () => {
   return (
     <>
       <Head>
-        <title>Works | bimaindra.com</title>
+        <title>About This Site | bimaindra.com</title>
       </Head>
       <div className="container">
         <UnderDev />
@@ -14,4 +14,4 @@ const Works = () => {
   );
 };
 
-export default Works;
+export default Work;

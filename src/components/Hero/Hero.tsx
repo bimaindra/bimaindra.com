@@ -29,7 +29,7 @@ const Hero = ({ link, gtm }: HeroProps) => {
   }, []);
 
   return (
-    <section className="relative -mt-16 min-h-[320px] md:min-h-[450px]">
+    <section className="relative -mt-14 min-h-[320px] md:min-h-[450px] lg:-mt-16">
       <div
         className={`bg-pattern-${
           even ? "polka" : "polka"
@@ -51,7 +51,7 @@ const Hero = ({ link, gtm }: HeroProps) => {
                 />
               </motion.div>
               <TypeAnimation
-                sequence={[1000, "Hola,", 1500, `Hola, I'm Bima.`]}
+                sequence={[500, "Hola,", 1000, `Hola, I'm Bima.`]}
                 speed={30}
                 cursor={false}
                 wrapper="span"
@@ -60,8 +60,8 @@ const Hero = ({ link, gtm }: HeroProps) => {
             <p className="mb-6">
               {/*Web Front End Engineer from Indonesia <span className="ml-1">🇮🇩</span>*/}
               <TypeAnimation
-                sequence={[5000, "Web Front End Engineer from Indonesia 🇮🇩"]}
-                speed={10}
+                sequence={[3250, "Web Front End Engineer from Indonesia 🇮🇩"]}
+                speed={50}
                 cursor={false}
                 wrapper="span"
               />
@@ -69,7 +69,7 @@ const Hero = ({ link, gtm }: HeroProps) => {
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ delay: 10 }}
+              transition={{ delay: 7 }}
               viewport={{ once: true }}>
               <Button type="link" text="More About" href={link} gtm={gtm} />
             </motion.div>

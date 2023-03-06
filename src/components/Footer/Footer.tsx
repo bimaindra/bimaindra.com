@@ -13,14 +13,19 @@ const Footer = () => {
               About
             </Link>
             <Link
-              href="/works"
-              className="px-2 leading-none hover:text-slate-500 dark:text-white">
-              Works
-            </Link>
-            <Link
               href="/blog"
               className="px-2 leading-none hover:text-slate-500 dark:text-white">
               Blog
+            </Link>
+            <Link
+              href="/work"
+              className="px-2 leading-none hover:text-slate-500 dark:text-white">
+              Work
+            </Link>
+            <Link
+              href="/site"
+              className="px-2 leading-none hover:text-slate-500 dark:text-white">
+              Disclaimer
             </Link>
           </div>
           <div className="flex items-center gap-x-4">
