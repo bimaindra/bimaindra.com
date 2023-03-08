@@ -67,7 +67,7 @@ const About = () => {
                 <Link href="https://tailwindcss.com/">TailwindCSS</Link>
               </li>
             </ul>
-            <p>Deep dive learning:</p>
+            <p>Currently learning:</p>
             <ul>
               <li>
                 <Link href="https://redux.js.org/">Redux</Link>

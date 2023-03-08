@@ -44,6 +44,11 @@ a {
     linear-gradient(#2563eb, #2563eb);
 }
 
+.dark .u-link-underline-black {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#ffffff, #ffffff);
+}
+
 .u-link-underline.active,
 .u-link-underline:hover {
   background-size: 100% 3px;
@@ -67,6 +72,10 @@ a {
 
 .shadow-spread {
   box-shadow: 0px -20px 24px 12px rgb(241 245 249 / 50%);
+}
+
+.dark .shadow-spread {
+  box-shadow: 0px -20px 24px 12px rgb(71 85 105 / 50%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -115,18 +124,6 @@ a {
   100% {
     transform: rotate(0);
   }
-}
-
-.bg-pattern-triangle {
-  @apply bg-slate-500;
-  background-image: linear-gradient(
-    -45deg,
-    #f8fafc,
-    #f8fafc 50%,
-    #e2e8f0 50%,
-    #e2e8f0
-  );
-  background-size: 28px 28px;
 }
 
 .bg-pattern-polka {

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
@@ -11,30 +10,11 @@ type HeroProps = {
 };
 
 const Hero = ({ link, gtm }: HeroProps) => {
-  const [even, setEven] = useState<boolean>();
-
-  const getDate = () => {
-    const date = new Date();
-    const minute = date.getMinutes();
-
-    if (minute % 2 === 0) {
-      setEven(true);
-    } else {
-      setEven(false);
-    }
-  };
-
-  useEffect(() => {
-    getDate();
-  }, []);
-
   return (
     <section className="relative -mt-14 min-h-[320px] md:min-h-[450px] lg:-mt-16">
       <div
-        className={`bg-pattern-${
-          even ? "polka" : "polka"
-        } fixed bottom-auto left-0 right-0 w-full`}>
-        <div className="grid min-h-[320px] place-items-center bg-slate-50 bg-opacity-10 text-center backdrop-blur-[3px] dark:bg-slate-600 dark:bg-opacity-80 md:min-h-[450px]">
+        className={`bg-pattern-polka fixed bottom-auto left-0 right-0 w-full`}>
+        <div className="grid min-h-[320px] place-items-center bg-slate-50 bg-opacity-10 text-center backdrop-blur-[1.75px] dark:bg-slate-600 md:min-h-[450px]">
           <div className="container">
             <h1 className="mb-4 flex items-center justify-center gap-x-4 text-3xl font-title md:text-4xl">
               <motion.div

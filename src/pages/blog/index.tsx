@@ -2,7 +2,6 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import { isDev } from "@/lib/config";
 import { graphql, getAllPosts } from "@/lib/query";
-import { formatDate } from "@/lib/helpers";
 import BlogCard from "@/components/BlogCard";
 
 const QUERY_POSTS = getAllPosts;
