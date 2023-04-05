@@ -20,16 +20,56 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Bima Indra Mulya | Web Front End Engineer</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width,height=device-height, initial-scale=1, shrink-to-fit=yes"
+        />
+        {/*<!--theme colors -->*/}
+        <meta name="theme-color" content="#219EBC" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+
+        {/*<!--Basic meta info -->*/}
         <meta
           name="description"
-          content="Web Front End Engineer with 5+ years experience leveraging CSS and JavaScript to build responsive websites and interactive features that drive business growth and improve UX."
+          content="Web Front End Engineer with 5+ years of experience leveraging CSS and JavaScript to build interactive websites that drive business growth and improve UX."
         />
         <meta
-          name="keyword"
-          content="web development, front end developer, front end engineer, programming"
+          name="keywords"
+          content="web development, front end developer, front end engineer, programming, web front end engineer, webdev"
         />
+        <meta name="author" content="Bima Indra Mulya" />
+
+        {/*<!--OpenGraph meta -->*/}
+        <meta
+          property="og:description"
+          content="Web Front End Engineer with 5+ years of experience leveraging CSS and JavaScript to build interactive websites that drive business growth and improve UX."
+        />
+        <meta property="og:title" content="Bima Indra Mulya" />
+        <meta property="og:image" content="/logo.jpg" />
+        <meta property="og:url" content="" />
+
+        {/*<!--meta for twitter -->*/}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@bimaindraa" />
+        <meta name="twitter:title" content="Bima Indra Mulya" />
+        <meta name="twitter:image" content="/profpic.jpg" />
+        <meta name="twitter:site" content="@bimaindraa" />
+        <meta
+          name="twitter:description"
+          content="Web Front End Engineer based in Surabaya, Indonesia."
+        />
+
+        {/*<!--Favicon-->*/}
         <link rel="icon" href="/favicon.ico" />
+
+        <title>Bima Indra Mulya | Web Front End Engineer</title>
       </Head>
       {/* Google Tag Manager - Global base code */}
       <Script
