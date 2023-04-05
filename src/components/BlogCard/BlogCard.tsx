@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { IconCalendar, IconPencil } from "../Icon";
 
 type BlogCardProps = {
@@ -21,15 +22,20 @@ const BlogCard = ({
   return (
     <Link
       href={slug}
-      className="flex flex-col items-center rounded-lg border border-gray-200 bg-white shadow-lg transition duration-300 hover:bg-gray-100 hover:shadow-sm dark:border-slate-700 dark:bg-slate-700 dark:hover:bg-slate-800 md:flex-row">
+      className="group flex flex-col items-center rounded-lg border border-gray-200 bg-white shadow-lg transition duration-200 hover:bg-gray-100 hover:shadow-sm dark:border-slate-700 dark:bg-slate-700 dark:hover:bg-slate-800 md:flex-row">
       {image && (
-        <img
-          className="aspect-video h-full w-full rounded-t-lg object-cover md:w-48 md:rounded-none md:rounded-l-lg"
+        <Image
+          className="aspect-video h-full w-full rounded-t-lg object-cover grayscale transition duration-200 group-hover:grayscale-0 md:w-56 md:rounded-none md:rounded-l-lg"
           src={image}
           alt={title}
+          width={200}
+          height={200}
         />
       )}
-      <div className="flex flex-col justify-between p-4 leading-normal">
+      <div
+        className={`flex flex-col justify-between p-4 leading-normal ${
+          image && `md:py-6`
+        }`}>
         <h5 className="mb-3 text-2xl font-title tracking-tight text-gray-900 dark:text-white">
           {title}
         </h5>

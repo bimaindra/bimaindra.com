@@ -25,6 +25,11 @@ module.exports = {
         "wd-black": "#000000",
         "wd-white": "#FFFFFF",
       },
+      aspectRatio: {
+        auto: "auto",
+        square: "1 / 1",
+        video: "16 / 9",
+      },
     },
   },
   plugins: [

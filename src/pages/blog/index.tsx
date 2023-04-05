@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: { posts },
-    revalidate: 3600,
+    revalidate: 1800,
   };
 };
 
@@ -44,7 +44,11 @@ const Blog = (posts: InferGetStaticPropsType<typeof getStaticProps>) => {
                     key={article.id}
                     title={article.title}
                     author={article.author ? article.author.name : "Bima Indra"}
-                    date={formatDate(article.date)}
+                    date={
+                      article.date
+                        ? formatDate(article.date)
+                        : formatDate("2018-08-17")
+                    }
                     description={
                       article.excerpt ? article.excerpt : article.body
                     }

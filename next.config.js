@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-};
-
 module.exports = {
+  reactStrictMode: true,
+  images: {
+    domains: ["media.graphassets.com"],
+  },
   webpack(config, options) {
     config.module.rules.push({
       test: /\.(ogg|mp3|wav|mpe?g)$/i,
