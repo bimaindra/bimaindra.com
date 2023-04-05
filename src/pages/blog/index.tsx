@@ -2,6 +2,7 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import { isDev } from "@/lib/config";
 import { graphql, getAllPosts } from "@/lib/query";
+import { formatDate } from "@/lib/helpers";
 import BlogCard from "@/components/BlogCard";
 
 const QUERY_POSTS = getAllPosts;
@@ -43,7 +44,7 @@ const Blog = (posts: InferGetStaticPropsType<typeof getStaticProps>) => {
                     key={article.id}
                     title={article.title}
                     author={article.author ? article.author.name : "Bima Indra"}
-                    date={article.date}
+                    date={formatDate(article.date)}
                     description={
                       article.excerpt ? article.excerpt : article.body
                     }

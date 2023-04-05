@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { IconCalendar, IconPencil } from "../Icon";
-import { formatDate } from "@/lib/helpers";
 
 type BlogCardProps = {
   title: string;
@@ -47,7 +46,7 @@ const BlogCard = ({
           {date && (
             <span className="flex items-center gap-1 text-sm dark:text-white">
               <IconCalendar />
-              {formatDate(date)}
+              {date}
             </span>
           )}
         </div>

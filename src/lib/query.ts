@@ -21,7 +21,7 @@ export const getAllPosts = isDev
     `
   : gql`
       query QueryPosts {
-        posts(stage: PUBLISHED, orderBy: publishedAt_ASC) {
+        posts(stage: PUBLISHED, orderBy: publishedAt_DESC) {
           id
           title
           slug
@@ -85,6 +85,7 @@ export const getPost = isDev
           seo {
             description
           }
+          tags
         }
       }
     `;

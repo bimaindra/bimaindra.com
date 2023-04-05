@@ -6,6 +6,7 @@ type ArticleDetailProps = {
   date: string;
   author: string;
   image?: string;
+  tags?: string[];
 };
 
 const ArticleDetail = ({
@@ -14,6 +15,7 @@ const ArticleDetail = ({
   date,
   author,
   image,
+  tags,
 }: ArticleDetailProps) => {
   return (
     <section className="u-safe-area">
@@ -41,6 +43,13 @@ const ArticleDetail = ({
             dangerouslySetInnerHTML={{
               __html: content,
             }}></div>
+          {tags && (
+            <div className="mt-8 flex gap-4">
+              {tags.map((item: string) => {
+                return <span>#{item}</span>;
+              })}
+            </div>
+          )}
         </div>
       </div>
     </section>

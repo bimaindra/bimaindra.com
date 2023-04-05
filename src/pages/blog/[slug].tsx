@@ -55,8 +55,9 @@ const BlogDetail = ({
         title={post.title}
         content={post.content ? post.content.html : post.body}
         date={post.date ? formatDate(post.date) : formatDate("2018-08-17")}
-        author={post.author ? post.author.name : "Admin"}
-        image={post.coverImage}
+        author={post.author ? post.author.name : "Bima Indra"}
+        image={post.coverImage && post.coverImage.url}
+        tags={post.tags}
       />
     </>
   );
