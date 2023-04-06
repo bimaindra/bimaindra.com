@@ -53,6 +53,7 @@ const BlogDetail = ({
       </Head>
       <ArticleDetail
         title={post.title}
+        description={post.excerpt ? post.excerpt : post.body}
         content={post.content ? post.content.html : post.body}
         date={post.date ? formatDate(post.date) : formatDate("2018-08-17")}
         author={post.author ? post.author.name : "Bima Indra"}

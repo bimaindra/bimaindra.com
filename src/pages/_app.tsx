@@ -17,6 +17,18 @@ export default function App({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
 
+  const meta = {
+    title: "Bima Indra Mulya",
+    description:
+      "Web Front End Engineer with 5+ years of experience leveraging CSS and JavaScript to build interactive websites that drive business growth and improve UX.",
+    descriptionAlt: "Web Front End Engineer based in Surabaya, Indonesia.",
+    keywords:
+      "web development, front end developer, front end engineer, programming, web front end engineer, webdev",
+    creator: "@bimaindraa",
+    image: "https://bimaindra.com/logo.jpg",
+    url: "https://bimaindra.com",
+  };
+
   return (
     <>
       <Head>
@@ -26,49 +38,44 @@ export default function App({ Component, pageProps }: AppProps) {
           name="viewport"
           content="width=device-width,height=device-height, initial-scale=1, shrink-to-fit=yes"
         />
-        {/*<!--theme colors -->*/}
-        <meta name="theme-color" content="#219EBC" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="" />
+        <meta name="theme-color" content="#f8fafc" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
-
         {/*<!--Basic meta info -->*/}
         <meta
           name="description"
-          content="Web Front End Engineer with 5+ years of experience leveraging CSS and JavaScript to build interactive websites that drive business growth and improve UX."
+          content={meta.description}
+          key="bs-description"
         />
-        <meta
-          name="keywords"
-          content="web development, front end developer, front end engineer, programming, web front end engineer, webdev"
-        />
-        <meta name="author" content="Bima Indra Mulya" />
-
+        <meta name="keywords" content={meta.keywords} key="bs-keywords" />
+        <meta name="author" content={meta.title} key="bs-author" />
         {/*<!--OpenGraph meta -->*/}
+        <meta property="og:title" content={meta.title} key="og-title" />
         <meta
           property="og:description"
-          content="Web Front End Engineer with 5+ years of experience leveraging CSS and JavaScript to build interactive websites that drive business growth and improve UX."
+          content={meta.description}
+          key="og-description"
         />
-        <meta property="og:title" content="Bima Indra Mulya" />
-        <meta property="og:image" content="https://bimaindra.com/logo.jpg" />
-        <meta property="og:url" content="" />
-
+        <meta property="og:image" content={meta.image} key="og-image" />
+        <meta property="og:url" content={meta.url} key="og-url" />
         {/*<!--meta for twitter -->*/}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@bimaindraa" />
-        <meta name="twitter:title" content="Bima Indra Mulya" />
-        <meta name="twitter:image" content="https://bimaindra.com/logo.jpg" />
-        <meta name="twitter:site" content="@bimaindraa" />
+        <meta name="twitter:title" content={meta.title} key="tw-title" />
+        <meta name="twitter:card" content="summary_large_image" key="tw-card" />
+        <meta name="twitter:site" content={meta.creator} key="tw-site" />
+        <meta name="twitter:site:id" content={meta.creator} key="tw-site-id" />
+        <meta name="twitter:creator" content={meta.creator} key="tw-creator" />
         <meta
           name="twitter:description"
-          content="Web Front End Engineer based in Surabaya, Indonesia."
+          content={meta.descriptionAlt}
+          key="tw-description"
         />
-
+        <meta name="twitter:image" content={meta.image} key="tw-image" />
         {/*<!--Favicon-->*/}
         <link rel="icon" href="/favicon.ico" />
-
+        {/*<!--Favicon-->*/}
         <title>Bima Indra Mulya | Web Front End Engineer</title>
       </Head>
       {/* Google Tag Manager - Global base code */}
