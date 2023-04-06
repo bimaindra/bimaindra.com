@@ -52,14 +52,14 @@ export default function App({ Component, pageProps }: AppProps) {
           content="Web Front End Engineer with 5+ years of experience leveraging CSS and JavaScript to build interactive websites that drive business growth and improve UX."
         />
         <meta property="og:title" content="Bima Indra Mulya" />
-        <meta property="og:image" content="/logo.jpg" />
+        <meta property="og:image" content="https://bimaindra.com/logo.jpg" />
         <meta property="og:url" content="" />
 
         {/*<!--meta for twitter -->*/}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@bimaindraa" />
         <meta name="twitter:title" content="Bima Indra Mulya" />
-        <meta name="twitter:image" content="/profpic.jpg" />
+        <meta name="twitter:image" content="https://bimaindra.com/logo.jpg" />
         <meta name="twitter:site" content="@bimaindraa" />
         <meta
           name="twitter:description"
