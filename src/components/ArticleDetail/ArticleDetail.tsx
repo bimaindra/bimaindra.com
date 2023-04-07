@@ -50,6 +50,7 @@ const ArticleDetail = ({
         />
         <meta property="og:image" content={image} key="og-image" />
         <meta property="og:url" content={currentUrl} key="og-url" />
+        <meta property="og:type" content="article" key="og-type" />
         {/*<!--meta for twitter -->*/}
         <meta name="twitter:title" content={title} key="tw-title" />
         <meta

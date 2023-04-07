@@ -6,6 +6,7 @@ import Script from "next/script";
 import { FontDefault } from "@/lib/config";
 import Layout from "@/components/Layout";
 import { GTM_ID, pageview } from "@/lib/gtm";
+import { meta } from "@/data/seo";
 import "@/assets/styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -16,18 +17,6 @@ export default function App({ Component, pageProps }: AppProps) {
       router.events.off("routeChangeComplete", pageview);
     };
   }, [router.events]);
-
-  const meta = {
-    title: "Bima Indra Mulya",
-    description:
-      "Web Front End Engineer with 5+ years of experience leveraging CSS and JavaScript to build interactive websites that drive business growth and improve UX.",
-    descriptionAlt: "Web Front End Engineer based in Surabaya, Indonesia.",
-    keywords:
-      "web development, front end developer, front end engineer, programming, web front end engineer, webdev",
-    creator: "@bimaindraa",
-    image: "https://bimaindra.com/logo.jpg",
-    url: "https://bimaindra.com",
-  };
 
   return (
     <>
@@ -59,24 +48,31 @@ export default function App({ Component, pageProps }: AppProps) {
           content={meta.description}
           key="og-description"
         />
-        <meta property="og:image" content={meta.image} key="og-image" />
         <meta property="og:url" content={meta.url} key="og-url" />
+        <meta property="og:image" content={meta.image} key="og-image" />
+        <meta
+          property="og:site_name"
+          content={meta.site_name}
+          key="og-site-name"
+        />
+        <meta property="og:locale" content={meta.locale} key="og-locale" />
+        <meta property="og:type" content="website" key="og-type" />
         {/*<!--meta for twitter -->*/}
-        <meta name="twitter:title" content={meta.title} key="tw-title" />
         <meta name="twitter:card" content="summary_large_image" key="tw-card" />
-        <meta name="twitter:site" content={meta.creator} key="tw-site" />
-        <meta name="twitter:site:id" content={meta.creator} key="tw-site-id" />
-        <meta name="twitter:creator" content={meta.creator} key="tw-creator" />
+        <meta name="twitter:title" content={meta.title} key="tw-title" />
         <meta
           name="twitter:description"
-          content={meta.descriptionAlt}
+          content={meta.description}
           key="tw-description"
         />
+        <meta name="twitter:site" content={meta.creator} key="tw-site" />
+        <meta name="twitter:site:id" content={meta.creator} key="tw-site-id" />
         <meta name="twitter:image" content={meta.image} key="tw-image" />
+        <meta name="twitter:creator" content={meta.creator} key="tw-creator" />
         {/*<!--Favicon-->*/}
         <link rel="icon" href="/favicon.ico" />
-        {/*<!--Favicon-->*/}
-        <title>Bima Indra Mulya | Web Front End Engineer</title>
+        {/*<!--Title-->*/}
+        <title>{meta.title}</title>
       </Head>
       {/* Google Tag Manager - Global base code */}
       <Script
