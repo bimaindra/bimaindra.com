@@ -1,7 +1,7 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import { isDev } from "@/constants/config";
-import { graphql, getAllPosts } from "@/constants/query";
+import { graphql, getAllPosts } from "@/api/query";
 import { formatDate } from "@/utils";
 import BlogCard from "@/components/BlogCard";
 

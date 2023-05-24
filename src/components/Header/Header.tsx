@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
-import Profpic from "@/assets/images/profpic.jpg";
+import Profpic from "@/static/images/profpic.jpg";
 import useSound from "use-sound";
-import soundUrl from "@/assets/sounds/lamp.mp3";
+import soundUrl from "@/static/sounds/lamp.mp3";
 
 const Header = () => {
   const [isDarkMode, setDarkMode] = useState(false);

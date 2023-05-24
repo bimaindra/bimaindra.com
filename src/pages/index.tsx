@@ -21,7 +21,7 @@ export default function Home({
       <section
         id="timeline"
         className="u-safe-area relative bg-slate-100 dark:bg-slate-700">
-        <div className="pointer-events-none absolute inset-x-0 -top-5 flex justify-center bg-gradient-to-t from-slate-100 py-10 dark:from-slate-700 sm:-top-8 lg:-top-10"></div>
+        <div className="pointer-events-none absolute inset-x-0 -top-10 flex justify-center bg-gradient-to-t from-slate-100 pt-14 dark:from-slate-700 sm:-top-16 lg:-top-10"></div>
         <div className="container">
           <div className="mx-auto md:max-w-screen-sm lg:max-w-screen-md">
             <motion.h2

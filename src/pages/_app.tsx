@@ -7,7 +7,7 @@ import { FontDefault } from "@/constants/config";
 import Layout from "@/components/Layout";
 import { GTM_ID, pageview } from "@/constants/gtm";
 import { meta } from "@/constants/seo";
-import "@/assets/styles/globals.css";
+import "@/static/styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -89,7 +89,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       />
       <div
-        className={`${FontDefault.className} bg-slate-50 text-wd-dark dark:bg-slate-600 dark:text-wd-light`}>
+        className={`${FontDefault.className} dark:text-wd-light bg-slate-50 text-wd-dark dark:bg-slate-600`}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
