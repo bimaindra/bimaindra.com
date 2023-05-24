@@ -1,4 +1,4 @@
-import { isDev } from "@/lib/config";
+import { isDev } from "@/constants/config";
 import { GraphQLClient, gql } from "graphql-request";
 
 const endpoint = isDev

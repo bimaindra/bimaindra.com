@@ -1,9 +1,6 @@
 import Image from "next/image";
+import { UnderDevProps } from "@/types";
 import Winking from "@/assets/images/winking-face.png";
-
-type UnderDevProps = {
-  status?: string;
-};
 
 const UnderDev = ({ status = "dev" }: UnderDevProps) => {
   return (

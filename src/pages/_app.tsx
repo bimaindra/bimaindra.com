@@ -3,10 +3,10 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Script from "next/script";
-import { FontDefault } from "@/lib/config";
+import { FontDefault } from "@/constants/config";
 import Layout from "@/components/Layout";
-import { GTM_ID, pageview } from "@/lib/gtm";
-import { meta } from "@/data/seo";
+import { GTM_ID, pageview } from "@/constants/gtm";
+import { meta } from "@/constants/seo";
 import "@/assets/styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -21,8 +21,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" httpEquiv="Content-Type" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
           name="viewport"
           content="width=device-width,height=device-height, initial-scale=1, shrink-to-fit=yes"

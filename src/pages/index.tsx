@@ -20,7 +20,8 @@ export default function Home({
       <Hero link="/about" gtm="hero-button-know-more" />
       <section
         id="timeline"
-        className="u-safe-area shadow-spread relative -mt-1 bg-slate-100 dark:bg-slate-700">
+        className="u-safe-area relative bg-slate-100 dark:bg-slate-700">
+        <div className="pointer-events-none absolute inset-x-0 -top-5 flex justify-center bg-gradient-to-t from-slate-100 py-10 dark:from-slate-700 sm:-top-8 lg:-top-10"></div>
         <div className="container">
           <div className="mx-auto md:max-w-screen-sm lg:max-w-screen-md">
             <motion.h2

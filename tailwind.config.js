@@ -14,16 +14,11 @@ module.exports = {
       title: 600,
     },
     extend: {
+      backgroundImage: {
+        dots: "radial-gradient(#94a3b8 1px,transparent 0)",
+      },
       colors: {
-        "wd-primary": "#219EBC",
-        "wd-secondary": "#84A98C",
-        "wd-error": "#AE2012",
-        "wd-warning": "#EE9B00",
-        "wd-success": "#0A9396",
-        "wd-light": "#FFFFFF",
         "wd-dark": "#001219",
-        "wd-black": "#000000",
-        "wd-white": "#FFFFFF",
       },
       aspectRatio: {
         auto: "auto",

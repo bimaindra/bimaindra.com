@@ -1,9 +1,6 @@
 import { motion, Variants } from "framer-motion";
+import { TimelineProps } from "@/types";
 import { IconCalendar, IconGraduate, IconLocation, IconWork } from "../Icon";
-
-type TimelineProps = {
-  timeline: any[];
-};
 
 const cardVariants: Variants = {
   offscreen: {

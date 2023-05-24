@@ -1,9 +1,6 @@
-import Header from "@/components/Header";
+import { ChildrenProps } from "@/types";
 import Footer from "@/components/Footer";
-
-type ChildrenProps = {
-  children: React.ReactNode;
-};
+import Header from "@/components/Header";
 
 const Layout = ({ children }: ChildrenProps) => {
   return (

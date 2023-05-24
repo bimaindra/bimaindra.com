@@ -1,15 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import { BlogCardProps } from "@/types";
 import { IconCalendar, IconPencil } from "../Icon";
-
-type BlogCardProps = {
-  title: string;
-  description: string;
-  date: string;
-  slug: string;
-  author: string;
-  image?: string;
-};
 
 const BlogCard = ({
   title,

@@ -1,8 +1,8 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
-import { isDev } from "@/lib/config";
-import { graphql, getAllPosts } from "@/lib/query";
-import { formatDate } from "@/lib/helpers";
+import { isDev } from "@/constants/config";
+import { graphql, getAllPosts } from "@/constants/query";
+import { formatDate } from "@/utils";
 import BlogCard from "@/components/BlogCard";
 
 const QUERY_POSTS = getAllPosts;

@@ -76,7 +76,7 @@ const About = () => {
                 <Link href="https://graphql.org/">GraphQL</Link>
               </li>
               <li>
-                <Link href="https://www.framer.com/motion/">Framer Motion</Link>
+                <Link href="htthttps://www.prisma.io/">Prisma</Link>
               </li>
             </ul>
             <h2 className="decoration-slice underline decoration-dashed underline-offset-4">

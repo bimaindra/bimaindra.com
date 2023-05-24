@@ -1,12 +1,5 @@
 import Link from "next/link";
-
-type ButtonProps = {
-  type: string;
-  href: string;
-  text: string;
-  gtm?: string;
-  theme?: string;
-};
+import { ButtonProps } from "@/types";
 
 const Button = ({ type = "button", href, text, gtm, theme }: ButtonProps) => {
   return (

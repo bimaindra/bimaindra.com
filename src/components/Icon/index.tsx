@@ -1,10 +1,5 @@
 import { SVGAttributes } from "react";
 
-type IconProps = {
-  width: number;
-  height: number;
-};
-
 export const IconCalendar = (props: SVGAttributes<SVGElement>) => {
   return (
     <>

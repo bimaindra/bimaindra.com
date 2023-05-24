@@ -1,8 +1,8 @@
 import { GetStaticProps, GetStaticPaths, InferGetStaticPropsType } from "next";
 import Head from "next/head";
-import { isDev } from "@/lib/config";
-import { graphql, getAllSlugs, getPost } from "@/lib/query";
-import { formatDate } from "@/lib/helpers";
+import { isDev } from "@/constants/config";
+import { graphql, getAllSlugs, getPost } from "@/constants/query";
+import { formatDate } from "@/utils";
 import ArticleDetail from "@/components/ArticleDetail";
 
 const QUERY_SLUG = getAllSlugs;

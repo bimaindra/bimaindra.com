@@ -70,20 +70,6 @@ a {
   animation: 0.75s ease-out 0.25s logo;
 }
 
-.dark .shadow-spread {
-  box-shadow: 0px -20px 24px 12px rgb(71 85 105 / 50%);
-}
-
-@media (prefers-color-scheme: dark) {
-  .shadow-spread {
-    box-shadow: 0px -20px 24px 12px rgb(71 85 105 / 50%);
-  }
-}
-
-.shadow-spread {
-  box-shadow: 0px -20px 24px 12px rgb(241 245 249 / 50%);
-}
-
 @keyframes hands {
   0% {
     transform: rotate(0);
@@ -124,10 +110,4 @@ a {
   100% {
     transform: rotate(0);
   }
-}
-
-.bg-pattern-polka {
-  @apply bg-slate-500;
-  background-image: radial-gradient(#1d4ed8 0.75px, #f8fafc 0.75px);
-  background-size: 20px 20px;
 }

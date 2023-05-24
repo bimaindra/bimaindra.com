@@ -1,17 +1,8 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import { ArticleDetailProps } from "@/types";
 import { IconCalendar, IconPencil } from "../Icon";
-
-type ArticleDetailProps = {
-  title: string;
-  description: string;
-  content: string;
-  date: string;
-  author: string;
-  image?: string;
-  tags?: string[] | any;
-};
 
 const ArticleDetail = ({
   title,
