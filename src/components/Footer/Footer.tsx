@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
         </div>
         <hr className="my-4 h-px border-0 bg-gray-200" />
-        <p className="text-center text-xs md:text-right">
+        <p className="text-center text-xs dark:text-white md:text-right">
           <span>&copy; 2019 - now | Bima Indra Mulya.</span>
         </p>
       </div>

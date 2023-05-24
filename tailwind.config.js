@@ -19,6 +19,7 @@ module.exports = {
       },
       colors: {
         "wd-dark": "#001219",
+        "wd-light": "#FFFFFF",
       },
       aspectRatio: {
         auto: "auto",
