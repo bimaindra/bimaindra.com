@@ -19,6 +19,7 @@
 		"react-dom": "^18.2.0",
 		"react-toggle-dark-mode": "^1.1.1",
 		"react-type-animation": "^2.1.2",
+		"sharp": "^0.32.1",
 		"url-loader": "^4.1.1",
 		"use-sound": "^4.0.1"
 	},
