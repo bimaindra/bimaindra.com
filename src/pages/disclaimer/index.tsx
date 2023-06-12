@@ -1,7 +1,7 @@
 import Head from "next/head";
 import UnderDev from "@/components/UnderDev";
 
-const Work = () => {
+const Disclaimer = () => {
   return (
     <>
       <Head>
@@ -14,4 +14,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Disclaimer;

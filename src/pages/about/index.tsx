@@ -19,7 +19,7 @@ const About = () => {
           <div className="prose mx-auto dark:prose-invert md:prose-base md:max-w-screen-sm lg:max-w-screen-md">
             <h1>Hi! My name is Bima.</h1>
             <p>
-              A Web Front End Engineer based in <em>Surabaya - Indonesia</em>{" "}
+              A Web Front End Engineer based in <em>Sidoarjo - Indonesia</em>{" "}
               with a passion for building user-friendly and visually appealing
               websites.
             </p>
@@ -57,11 +57,16 @@ const About = () => {
             <p>Daily use:</p>
             <ul>
               <li>
-                <Link href="https://reactjs.org/">ReactJS</Link> &{" "}
+                <Link href="https://reactjs.org/">ReactJS</Link>
+              </li>
+              <li>
                 <Link href="https://nextjs.org/">NextJS</Link>
               </li>
               <li>
-                <Link href="https://www.typescriptlang.org/">TypeScript</Link>
+                <Link href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                  Javascript
+                </Link>{" "}
+                / <Link href="https://www.typescriptlang.org/">TypeScript</Link>
               </li>
               <li>
                 <Link href="https://tailwindcss.com/">TailwindCSS</Link>

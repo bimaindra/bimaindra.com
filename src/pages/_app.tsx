@@ -3,8 +3,8 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Script from "next/script";
-import { FontDefault } from "@/constants/config";
 import Layout from "@/components/Layout";
+import { FontDefault } from "@/constants/config";
 import { GTM_ID, pageview } from "@/constants/gtm";
 import { meta } from "@/constants/seo";
 import "@/static/styles/globals.css";
@@ -89,7 +89,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       />
       <div
-        className={`${FontDefault.className} dark:text-wd-light bg-slate-50 text-wd-dark dark:bg-slate-600`}>
+        className={`${FontDefault.className} text-wd-dark dark:bg-slate-600 dark:text-wd-light`}>
         <Layout>
           <Component {...pageProps} />
         </Layout>

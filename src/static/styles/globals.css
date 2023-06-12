@@ -18,7 +18,7 @@ main {
 }
 
 a {
-  @apply text-wd-dark transition-colors duration-150;
+  @apply text-wd-dark transition-colors duration-150 hover:text-sky-600;
 }
 
 .container {
@@ -39,7 +39,7 @@ a {
 
 .u-link-underline-black {
   background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#2563eb, #2563eb);
+    linear-gradient(#0284c7, #0284c7);
 }
 
 .dark .u-link-underline-black {
