@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-x-4">
             <Link
-              href="http://github.com/wongdarjo"
+              href="http://github.com/bimaindra"
               target="_blank"
               className="dark:text-white">
               <IconGithub />
