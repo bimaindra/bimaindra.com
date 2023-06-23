@@ -23,7 +23,7 @@ const Hero = ({ link, gtm }: HeroProps) => {
   }, []);
 
   return (
-    <section className="relative min-h-[320px] bg-white bg-gradient-to-b from-sky-50 via-slate-50 to-sky-50 dark:from-slate-700 dark:via-slate-700 dark:to-slate-700 md:min-h-[480px] lg:-mt-16">
+    <section className="relative min-h-[320px] bg-white bg-gradient-to-b from-sky-50 via-slate-50 to-sky-50 dark:from-slate-700 dark:via-slate-700 dark:to-slate-700 md:-mt-16 md:min-h-[480px]">
       <div className="fixed bottom-auto left-0 right-0 w-full bg-grid-slate-light bg-[length:28px_28px] dark:bg-grid-slate-dark">
         <div className="grid min-h-[320px] place-items-center bg-opacity-10 text-center backdrop-blur-[.5px] md:min-h-[480px]">
           <div className="max-w-lg rounded-lg p-4">

@@ -7,7 +7,9 @@ const Footer = () => {
       <div className="container lg:max-w-screen-md">
         <div className="flex justify-between text-sm">
           <div className="flex items-center divide-x">
-            <Link href="/about" className="px-2 leading-none dark:text-white">
+            <Link
+              href="/about"
+              className="px-2 leading-none first:pl-0 dark:text-white">
               About
             </Link>
             <Link href="/blog" className="px-2 leading-none dark:text-white">
@@ -16,7 +18,9 @@ const Footer = () => {
             <Link href="/work" className="px-2 leading-none dark:text-white">
               Work
             </Link>
-            <Link href="/site" className="px-2 leading-none dark:text-white">
+            <Link
+              href="/disclaimer"
+              className="px-2 leading-none dark:text-white">
               Disclaimer
             </Link>
           </div>
@@ -36,8 +40,8 @@ const Footer = () => {
           </div>
         </div>
         <hr className="my-4 h-px border-0 bg-gray-200" />
-        <p className="text-center text-sm dark:text-white">
-          <span>&copy; 2019 - now | Bima Indra Mulya.</span>
+        <p className="text-center text-xs dark:text-white">
+          <span>&copy; 2019 - present | Bima Indra Mulya.</span>
         </p>
       </div>
     </footer>

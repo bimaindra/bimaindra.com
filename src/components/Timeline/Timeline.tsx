@@ -12,15 +12,15 @@ const cardVariants: Variants = {
     opacity: 1,
     transition: {
       type: "spring",
-      bounce: 0.5,
-      duration: 0.8,
+      bounce: 0.25,
+      duration: 0.35,
     },
   },
 };
 
 const Timeline = ({ timeline }: TimelineProps) => {
   return (
-    <ol className="relative ml-4 whitespace-normal break-words border-l border-gray-200 dark:border-white">
+    <ol className="relative ml-4 whitespace-normal break-words border-l border-gray-200 before:absolute before:top-0 before:-left-[4.5px] before:h-2 before:w-2 before:rounded-md before:bg-gray-200 after:absolute after:bottom-0 after:-left-[4.5px] after:h-2 after:w-2 after:rounded-md after:bg-gray-200 dark:border-white">
       {timeline.map((item, index) => {
         return (
           <motion.li
