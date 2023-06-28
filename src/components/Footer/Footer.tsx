@@ -19,9 +19,9 @@ const Footer = () => {
               Work
             </Link>
             <Link
-              href="/disclaimer"
+              href="/resources"
               className="px-2 leading-none dark:text-white">
-              Disclaimer
+              Resources
             </Link>
           </div>
           <div className="flex items-center gap-x-4">

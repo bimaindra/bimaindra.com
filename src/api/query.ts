@@ -89,3 +89,13 @@ export const getPost = isDev
         }
       }
     `;
+
+export const getPage = gql`
+  query QueryPage($slug: String!) {
+    page(where: { slug: $slug }) {
+      content {
+        html
+      }
+    }
+  }
+`;
