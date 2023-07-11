@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: false,
   images: {
-    domains: ["media.graphassets.com"],
+    domains: ["media.graphassets.com", "picsum.photos"],
   },
   webpack(config, options) {
     config.module.rules.push({

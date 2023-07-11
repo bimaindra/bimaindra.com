@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import { GraphQLClient } from "graphql-request";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { getPage } from "@/api/query";
+import useFetchPage from "@/hooks/useFetchPage";
 import {
   IconGithub,
   IconInstagram,
@@ -11,13 +10,9 @@ import {
   IconTwitter,
 } from "@/components/Icon";
 
-const QUERY_PAGE = getPage;
-const SLUG = "about";
-
 export const getStaticProps: GetStaticProps = async () => {
-  const { page } = await new GraphQLClient(
-    `${process.env.NEXT_HYGRAPH_API}`
-  ).request(QUERY_PAGE, { slug: SLUG });
+  const slug = "about";
+  const { page } = await useFetchPage(slug);
 
   if (!page) {
     return {

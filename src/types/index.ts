@@ -1,3 +1,17 @@
+export type TypePosts = {
+  id: string;
+  title: string;
+  slug: string;
+  date: string;
+  excerpt: string;
+  coverImage: {
+    url: string;
+  };
+  author: {
+    name: string;
+  };
+};
+
 export type ChildrenProps = {
   children: React.ReactNode;
 };

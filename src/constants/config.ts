@@ -19,3 +19,5 @@ export const FontDefault = localFont({
   ],
   display: "swap",
 });
+
+export const endpointGraphql = process.env.NEXT_HYGRAPH_API;

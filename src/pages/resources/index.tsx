@@ -1,15 +1,10 @@
 import Head from "next/head";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { GraphQLClient } from "graphql-request";
-import { getPage } from "@/api/query";
-
-const QUERY_PAGE = getPage;
-const SLUG = "resources";
+import useFetchPage from "@/hooks/useFetchPage";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { page } = await new GraphQLClient(
-    `${process.env.NEXT_HYGRAPH_API}`
-  ).request(QUERY_PAGE, { slug: SLUG });
+  const slug = "resources";
+  const { page } = await useFetchPage(slug);
 
   if (!page) {
     return {

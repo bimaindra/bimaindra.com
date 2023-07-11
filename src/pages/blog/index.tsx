@@ -1,14 +1,11 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
-import { isDev } from "@/constants/config";
-import { graphql, getAllPosts } from "@/api/query";
-import { formatDate } from "@/utils";
+import { formatDate } from "@/utils/formatDate";
 import BlogCard from "@/components/BlogCard";
-
-const QUERY_POSTS = getAllPosts;
+import useFetchPosts from "@/hooks/useFetchPosts";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { posts } = await graphql.request(QUERY_POSTS);
+  const { posts } = await useFetchPosts();
 
   if (!posts) {
     return {
@@ -23,7 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Blog = (posts: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const articles = isDev ? posts.posts.data : posts.posts;
+  const articles = posts.posts;
 
   return (
     <>

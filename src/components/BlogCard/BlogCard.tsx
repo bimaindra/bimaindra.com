@@ -28,7 +28,7 @@ const BlogCard = ({
         className={`flex flex-col justify-between p-4 leading-normal ${
           image && `md:py-6`
         }`}>
-        <h5 className="mb-3 text-2xl font-title tracking-tight text-gray-900 dark:text-white">
+        <h5 className="mb-3 text-2xl font-title tracking-tight text-gray-900 line-clamp-3 dark:text-white">
           {title}
         </h5>
         <p className="font-body text-gray-700 line-clamp-3 dark:text-gray-300">

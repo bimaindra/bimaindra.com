@@ -1,22 +1,12 @@
 import { GetStaticProps, GetStaticPaths, InferGetStaticPropsType } from "next";
 import Head from "next/head";
-import { isDev } from "@/constants/config";
-import { graphql, getAllSlugs, getPost } from "@/api/query";
-import { formatDate } from "@/utils";
+import { formatDate } from "@/utils/formatDate";
 import ArticleDetail from "@/components/ArticleDetail";
-
-const QUERY_SLUG = getAllSlugs;
-const QUERY_POST = getPost;
+import useFetchPostSlug from "@/hooks/useFetchPostSlug";
+import useFetchPostDetail from "@/hooks/useFetchPostDetail";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { posts } = await graphql.request(QUERY_SLUG);
-  const paths = isDev
-    ? posts.data.map((post: any) => ({
-        params: { slug: post.id },
-      }))
-    : posts.map((post: any) => ({
-        params: { slug: post.slug },
-      }));
+  const paths = await useFetchPostSlug();
 
   return {
     paths: paths,
@@ -27,9 +17,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({
   params,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const slug = params.slug;
-  const data = await graphql.request(QUERY_POST, { slug });
-  const post = data.post;
+  const { slug } = params;
+  const response = await useFetchPostDetail(slug);
+  const { post } = response;
 
   if (!post) {
     return {
