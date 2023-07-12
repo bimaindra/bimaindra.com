@@ -5,7 +5,10 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start"
+		"start": "next start",
+		"analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
 	},
 	"dependencies": {
 		"@next/font": "^13.0.5",
@@ -24,12 +27,14 @@
 		"use-sound": "^4.0.1"
 	},
 	"devDependencies": {
+		"@next/bundle-analyzer": "^13.4.9",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/line-clamp": "^0.4.2",
 		"@tailwindcss/typography": "^0.5.8",
 		"@types/node": "18.14.0",
 		"@types/react": "18.0.28",
 		"autoprefixer": "^10.4.13",
+		"cross-env": "^7.0.3",
 		"file-loader": "^6.2.0",
 		"prettier": "^2.8.0",
 		"prettier-plugin-tailwindcss": "^0.3.0",
