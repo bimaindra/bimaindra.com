@@ -2,6 +2,7 @@
 module.exports = {
   reactStrictMode: false,
   images: {
+    formats: ["image/avif", "image/webp"],
     domains: ["media.graphassets.com", "picsum.photos"],
   },
   webpack(config, options) {
