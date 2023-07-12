@@ -3,7 +3,7 @@ import { endpointGraphql } from "@/constants/config";
 
 export const graphql = new GraphQLClient(`${endpointGraphql}`);
 
-export const getAllPosts = gql`
+export const queryGetAllPosts = gql`
   query QueryPosts {
     posts(stage: PUBLISHED, orderBy: publishedAt_DESC) {
       id
@@ -21,7 +21,7 @@ export const getAllPosts = gql`
   }
 `;
 
-export const getAllSlugs = gql`
+export const queryGetAllSlugs = gql`
   query QuerySlugs {
     posts(stage: PUBLISHED) {
       slug
@@ -29,7 +29,7 @@ export const getAllSlugs = gql`
   }
 `;
 
-export const getPost = gql`
+export const queryGetPost = gql`
   query QueryPost($slug: String!) {
     post(where: { slug: $slug }) {
       id
@@ -54,12 +54,25 @@ export const getPost = gql`
   }
 `;
 
-export const getPage = gql`
+export const queryGetPage = gql`
   query QueryPage($slug: String!) {
     page(where: { slug: $slug }) {
       content {
         html
       }
+    }
+  }
+`;
+
+export const queryGetTimeline = gql`
+  query QueryTimeline {
+    timelines {
+      id
+      title
+      description
+      location
+      date
+      type
     }
   }
 `;
