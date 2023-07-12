@@ -1,9 +1,8 @@
 import { GetStaticProps, GetStaticPaths, InferGetStaticPropsType } from "next";
 import Head from "next/head";
+import { useFetchPostSlug, useFetchPostDetail } from "@/hooks/useFetch";
 import { formatDate } from "@/utils/formatDate";
 import ArticleDetail from "@/components/ArticleDetail";
-import useFetchPostSlug from "@/hooks/useFetchPostSlug";
-import useFetchPostDetail from "@/hooks/useFetchPostDetail";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = await useFetchPostSlug();

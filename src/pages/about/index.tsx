@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import useFetchPage from "@/hooks/useFetchPage";
+import { useFetchPage } from "@/hooks/useFetch";
 import {
   IconGithub,
   IconInstagram,

@@ -2,18 +2,21 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { motion } from "framer-motion";
 import Hero from "@/components/Hero";
 import Timeline from "@/components/Timeline";
-import dataTimeline from "@/data/timeline.json";
+import { graphql, queryGetTimeline } from "@/graphql/query";
 
 export const getStaticProps: GetStaticProps = async () => {
+  const { timelines } = await graphql.request(queryGetTimeline);
+
   return {
     props: {
-      timeline: dataTimeline,
+      timelines,
     },
+    revalidate: 1800,
   };
 };
 
 export default function Home({
-  timeline,
+  timelines,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
@@ -33,7 +36,7 @@ export default function Home({
                 Timeline
               </span>
             </motion.h2>
-            <Timeline timeline={timeline} />
+            <Timeline timeline={timelines} />
           </div>
         </div>
       </section>

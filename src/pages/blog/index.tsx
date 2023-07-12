@@ -1,8 +1,8 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import { formatDate } from "@/utils/formatDate";
+import { useFetchPosts } from "@/hooks/useFetch";
 import BlogCard from "@/components/BlogCard";
-import useFetchPosts from "@/hooks/useFetchPosts";
 
 export const getStaticProps: GetStaticProps = async () => {
   const { posts } = await useFetchPosts();
@@ -19,9 +19,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Blog = (posts: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const articles = posts.posts;
-
+const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Head>
@@ -35,22 +33,20 @@ const Blog = (posts: InferGetStaticPropsType<typeof getStaticProps>) => {
               <p>Mostly I used to write in Bahasa 🇮🇩.</p>
             </div>
             <div className="mt-8 grid gap-6 md:gap-10 lg:mt-12">
-              {articles.map((article: any) => {
+              {posts.map((post: any) => {
                 return (
                   <BlogCard
-                    key={article.id}
-                    title={article.title}
-                    author={article.author ? article.author.name : "Bima Indra"}
+                    key={post.id}
+                    title={post.title}
+                    author={post.author ? post.author.name : "Bima Indra"}
                     date={
-                      article.date
-                        ? formatDate(article.date)
+                      post.date
+                        ? formatDate(post.date)
                         : formatDate("2018-08-17")
                     }
-                    description={
-                      article.excerpt ? article.excerpt : article.body
-                    }
-                    image={article.coverImage && article.coverImage.url}
-                    slug={`/blog/${article.slug ? article.slug : article.id}`}
+                    description={post.excerpt ? post.excerpt : post.body}
+                    image={post.coverImage && post.coverImage.url}
+                    slug={`/blog/${post.slug ? post.slug : post.id}`}
                   />
                 );
               })}

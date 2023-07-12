@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import useFetchPage from "@/hooks/useFetchPage";
+import { useFetchPage } from "@/hooks/useFetch";
 
 export const getStaticProps: GetStaticProps = async () => {
   const slug = "resources";
