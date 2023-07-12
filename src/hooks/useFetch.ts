@@ -34,7 +34,7 @@ export const useFetchPostDetail = async (slug: string) => {
   return res;
 };
 
-export const useFetchPostSlug = async () => {
+export const useFetchPostSlugs = async () => {
   const { posts } = await graphql.request(queryGetAllSlugs);
   const slugs = isDev
     ? fakePosts.posts.map((post) => ({

@@ -54,18 +54,23 @@ const ArticleDetail = ({
           content={image ? image : "https://bimaindra.com/logo.jpg"}
           key="tw-image"
         />
+        <title>{`${title} | bimaindra.com`}</title>
       </Head>
       <section className="u-safe-area">
         <div className="container">
           <div className="prose mx-auto dark:prose-invert md:prose-base md:max-w-screen-sm lg:max-w-screen-md">
             {image && (
-              <div className="aspect-w-16 aspect-h-9 mb-6 md:mb-8">
+              <div className="aspect-w-16 aspect-h-9 relative mb-6 md:mb-8">
                 <Image
                   className="!m-0 h-full w-full rounded-lg object-cover"
                   src={image}
                   alt={title}
-                  width={500}
-                  height={500}
+                  fill
+                  sizes="100vw"
+                  priority
+                  style={{
+                    objectFit: "cover",
+                  }}
                 />
               </div>
             )}

@@ -1,14 +1,13 @@
 import { GetStaticProps, GetStaticPaths, InferGetStaticPropsType } from "next";
-import Head from "next/head";
-import { useFetchPostSlug, useFetchPostDetail } from "@/hooks/useFetch";
+import { useFetchPostSlugs, useFetchPostDetail } from "@/hooks/useFetch";
 import { formatDate } from "@/utils/formatDate";
 import ArticleDetail from "@/components/ArticleDetail";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = await useFetchPostSlug();
+  const paths = await useFetchPostSlugs();
 
   return {
-    paths: paths,
+    paths,
     fallback: "blocking",
   };
 };
@@ -37,16 +36,13 @@ const BlogDetail = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
-      <Head>
-        <title>{post.title} | bimaindra.com</title>
-      </Head>
       <ArticleDetail
         title={post.title}
-        description={post.excerpt ? post.excerpt : post.body}
-        content={post.content ? post.content.html : post.body}
+        description={post.excerpt}
+        content={post.content.html}
         date={post.date ? formatDate(post.date) : formatDate("2018-08-17")}
         author={post.author ? post.author.name : "Bima Indra"}
-        image={post.coverImage && post.coverImage.url}
+        image={post.coverImage.url}
         tags={post.tags}
       />
     </>

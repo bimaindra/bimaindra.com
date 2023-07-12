@@ -1,5 +1,5 @@
 export type TypePosts = {
-  id: string;
+  id: string | number;
   title: string;
   slug: string;
   date: string;

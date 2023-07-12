@@ -1,7 +1,7 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
-import { formatDate } from "@/utils/formatDate";
 import { useFetchPosts } from "@/hooks/useFetch";
+import { formatDate } from "@/utils/formatDate";
 import BlogCard from "@/components/BlogCard";
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -44,9 +44,9 @@ const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
                         ? formatDate(post.date)
                         : formatDate("2018-08-17")
                     }
-                    description={post.excerpt ? post.excerpt : post.body}
-                    image={post.coverImage && post.coverImage.url}
-                    slug={`/blog/${post.slug ? post.slug : post.id}`}
+                    description={post.excerpt}
+                    image={post.coverImage.url}
+                    slug={`/blog/${post.slug}`}
                   />
                 );
               })}

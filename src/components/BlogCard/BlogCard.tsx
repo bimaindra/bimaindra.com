@@ -36,13 +36,13 @@ const BlogCard = ({
         </p>
         <div className="mt-6 flex justify-between md:mt-8">
           {author && (
-            <span className="flex items-center gap-1 text-sm dark:text-white">
+            <span className="flex items-center gap-1 text-sm text-gray-900 dark:text-white">
               <IconPencil />
               {author}
             </span>
           )}
           {date && (
-            <span className="flex items-center gap-1 text-sm dark:text-white">
+            <span className="flex items-center gap-1 text-sm text-gray-900 dark:text-white">
               <IconCalendar />
               {date}
             </span>
