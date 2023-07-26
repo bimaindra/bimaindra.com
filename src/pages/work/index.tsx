@@ -3,6 +3,7 @@ import { useFetchPortfolios } from "@/hooks/useFetch";
 import UnderDev from "@/components/UnderDev";
 import { formatDate } from "@/utils/formatDate";
 import { IconCalendar } from "@/components/Icon";
+import CardProject from "@/components/CardProject";
 
 export const getStaticProps = async () => {
   const { portfolios } = await useFetchPortfolios();
@@ -35,30 +36,14 @@ const Work = ({ portfolios }: { portfolios: any }) => {
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-2">
               {portfolios ? (
                 portfolios.map((portfolio: any) => (
-                  <div
-                    className="flex flex-col justify-between rounded-lg border shadow-lg transition-shadow hover:text-inherit hover:shadow-md"
-                    key={portfolio.id}>
-                    <div className="flex flex-col gap-2 px-5 py-4">
-                      <h3 className="text-lg font-title">{portfolio.title}</h3>
-                      <p className="text-sm">{portfolio.excerpt}</p>
-                    </div>
-                    <div className="flex justify-between border-t px-5 py-4">
-                      <p className="flex items-center gap-1 font-mono text-xs">
-                        <span>
-                          <IconCalendar />{" "}
-                        </span>
-                        <b className="mt-0.5">
-                          {formatDate(portfolio.date, true)}
-                        </b>
-                      </p>
-                      <a
-                        href={portfolio.url}
-                        target="_blank"
-                        className="text-sm underline dark:text-white">
-                        Visit website
-                      </a>
-                    </div>
-                  </div>
+                  <CardProject
+                    key={portfolio.id}
+                    title={portfolio.title}
+                    excerpt={portfolio.excerpt}
+                    date={formatDate(portfolio.date, true)}
+                    url={portfolio.url}
+                    stacks={portfolio.techStack}
+                  />
                 ))
               ) : (
                 <UnderDev />

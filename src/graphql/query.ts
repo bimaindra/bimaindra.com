@@ -92,6 +92,7 @@ export const queryPortfolios = gql`
         title
       }
       excerpt
+      techStack
     }
   }
 `;

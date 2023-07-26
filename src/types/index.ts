@@ -55,3 +55,11 @@ export type BlogCardProps = {
   author: string;
   image?: string;
 };
+
+export type CardProjectProps = {
+  title: string;
+  excerpt: string;
+  date?: string;
+  url: string;
+  stacks: string[];
+};

@@ -62,6 +62,11 @@ const Header = () => {
       active: router.pathname === "/about",
     },
     {
+      name: "Work",
+      href: "/work/",
+      active: router.pathname === "/work",
+    },
+    {
       name: "Blog",
       href: "/blog/",
       active: router.pathname.includes("/blog"),
