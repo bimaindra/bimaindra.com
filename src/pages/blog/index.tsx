@@ -41,11 +41,7 @@ const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
                     key={post.id}
                     title={post.title}
                     author={post.author ? post.author.name : "Bima Indra"}
-                    date={
-                      post.date
-                        ? formatDate(post.date)
-                        : formatDate("2018-08-17")
-                    }
+                    date={formatDate(post.date)}
                     description={post.excerpt}
                     image={post.coverImage.url}
                     slug={`/blog/${post.slug}`}

@@ -41,7 +41,7 @@ export type ArticleDetailProps = {
   title: string;
   description: string;
   content: string;
-  date: string;
+  date?: string;
   author: string;
   image?: string;
   tags?: string[] | any;
@@ -50,7 +50,7 @@ export type ArticleDetailProps = {
 export type BlogCardProps = {
   title: string;
   description: string;
-  date: string | undefined;
+  date?: string;
   slug: string;
   author: string;
   image?: string;

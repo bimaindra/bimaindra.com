@@ -6,7 +6,7 @@ import { IconCalendar, IconPencil } from "../Icon";
 const BlogCard = ({
   title,
   description,
-  date = "2018-08-17",
+  date,
   slug,
   author,
   image,
