@@ -7,8 +7,6 @@ import BlogCard from "@/components/BlogCard";
 export const getStaticProps: GetStaticProps = async () => {
   const { posts } = await useFetchPosts();
 
-  console.log(posts);
-
   if (!posts) {
     return {
       notFound: true,
