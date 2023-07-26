@@ -76,3 +76,22 @@ export const queryGetTimeline = gql`
     }
   }
 `;
+
+export const queryPortfolios = gql`
+  query QueryPortfolios {
+    portfolios(orderBy: date_DESC) {
+      id
+      description {
+        html
+      }
+      slug
+      title
+      url
+      date
+      category {
+        title
+      }
+      excerpt
+    }
+  }
+`;

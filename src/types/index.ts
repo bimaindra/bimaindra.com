@@ -50,7 +50,7 @@ export type ArticleDetailProps = {
 export type BlogCardProps = {
   title: string;
   description: string;
-  date: string;
+  date: string | undefined;
   slug: string;
   author: string;
   image?: string;

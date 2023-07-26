@@ -4,6 +4,7 @@ import {
   queryGetAllPosts,
   queryGetPost,
   queryGetAllSlugs,
+  queryPortfolios,
 } from "@/graphql/query";
 import { isDev } from "@/constants/config";
 import fakePosts from "@/data/posts.json";
@@ -45,4 +46,10 @@ export const useFetchPostSlugs = async () => {
       }));
 
   return slugs;
+};
+
+export const useFetchPortfolios = async () => {
+  const res = await graphql.request(queryPortfolios);
+
+  return res;
 };
