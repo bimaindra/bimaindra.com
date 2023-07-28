@@ -95,8 +95,8 @@ const ArticleDetail = ({
                   <b>Tags:</b>
                 </span>
                 <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                  {tags.map((item: string) => {
-                    return <span>#{item}</span>;
+                  {tags.map((item: string, index: number) => {
+                    return <span key={index}>#{item}</span>;
                   })}
                 </div>
               </div>

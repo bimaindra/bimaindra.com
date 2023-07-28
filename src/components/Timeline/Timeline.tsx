@@ -1,6 +1,7 @@
 import { motion, Variants } from "framer-motion";
 import { TimelineProps } from "@/types";
 import { IconCalendar, IconGraduate, IconLocation, IconWork } from "../Icon";
+import { formatDate } from "@/utils/formatDate";
 
 const cardVariants: Variants = {
   offscreen: {
@@ -53,7 +54,7 @@ const Timeline = ({ timeline }: TimelineProps) => {
             </h3>
             <time className="mb-2 flex items-center gap-x-2 text-sm leading-none text-gray-800 dark:text-slate-200 md:text-sm">
               <IconCalendar />
-              <span>{item.date}</span>
+              <span>{formatDate(item.date)}</span>
             </time>
             <span className="mb-2 flex items-center gap-x-2 text-sm leading-none text-gray-800 dark:text-slate-200 md:text-sm">
               <IconLocation />
