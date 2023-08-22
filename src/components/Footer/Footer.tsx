@@ -4,7 +4,7 @@ import { IconGithub, IconTwitter } from "../Icon";
 const Footer = () => {
   return (
     <footer className="py-6 shadow-slate-200 dark:bg-slate-800 md:pt-8">
-      <div className="container lg:max-w-screen-md">
+      <div className="container sm:max-w-screen-sm lg:max-w-screen-md">
         <div className="flex justify-between text-sm">
           <div className="flex items-center divide-x">
             <Link

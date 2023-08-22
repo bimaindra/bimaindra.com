@@ -1,7 +1,16 @@
-import { useEffect, useContext } from "react";
-import Link from "next/link";
+import { useEffect, useContext, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import {
+  Navbar,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  Link,
+} from "@nextui-org/react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { ThemeContext } from "@/context/ThemeContext";
 import Profpic from "@/static/images/profpic.jpg";
@@ -9,7 +18,9 @@ import useSound from "use-sound";
 import soundUrl from "@/static/sounds/lamp.mp3";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean | undefined>(false);
   const ctxTheme = useContext(ThemeContext);
+  const router = useRouter();
   const [playSwitchTheme] = useSound(soundUrl);
 
   const handleThemeOnLoad = () => {
@@ -48,8 +59,6 @@ const Header = () => {
     handleThemeOnLoad();
   }, []);
 
-  const router = useRouter();
-
   const linkItems = [
     {
       name: "Home",
@@ -74,9 +83,12 @@ const Header = () => {
   ];
 
   return (
-    <header className="c-header fixed left-0 right-0 top-0 z-50 lg:pt-4">
-      <div className="mx-auto w-full rounded-sm bg-slate-50 bg-opacity-40 py-3 pl-3 pr-4 shadow-lg backdrop-blur-sm dark:bg-slate-800 sm:max-w-screen-sm md:rounded-md md:border lg:max-w-screen-md xl:rounded-xl">
-        <div className="flex items-center justify-between">
+    <Navbar
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      className="c-navbar fixed left-0 right-0 top-0 z-50 mx-auto rounded-sm shadow-lg sm:max-w-screen-sm md:mt-4 lg:max-w-screen-md sm:rounded-xl">
+      <NavbarContent>
+        <NavbarBrand>
           <Link
             href="/"
             className="group relative text-gray-700 dark:text-white">
@@ -90,33 +102,54 @@ const Header = () => {
               />
             </div>
           </Link>
-          <ul className="flex items-center gap-x-6">
-            {linkItems.map((linkItem, index) => {
-              return (
-                <li key={index}>
-                  <Link
-                    href={linkItem.href}
-                    className={`u-link-underline u-link-underline-black block rounded text-sm font-medium text-gray-700 transition-colors dark:text-white md:border-0 md:p-0 md:hover:bg-transparent md:dark:hover:bg-transparent md:dark:hover:text-gray-400 ${
-                      linkItem.active ? "active text-blue-700" : ""
-                    }`}>
-                    {linkItem.name}
-                  </Link>
-                </li>
-              );
-            })}
-            <li className="mx-1 cursor-pointer" onClick={() => playSwitchTheme}>
-              <DarkModeSwitch
-                checked={ctxTheme?.theme === "dark" ? true : false}
-                onChange={handleToogleTheme}
-                moonColor="rgb(245, 158, 11)"
-                sunColor="#001219"
-                size={22}
-              />
-            </li>
-          </ul>
-        </div>
+        </NavbarBrand>
+      </NavbarContent>
+      <div className="flex items-center gap-6">
+        <NavbarContent className="hidden gap-4 sm:flex" justify="end">
+          {linkItems.map((item, index) => (
+            <NavbarItem key={`desktop-${index}`}>
+              <Link
+                href={item.href}
+                className={`u-link-underline u-link-underline-black block rounded text-sm font-medium text-gray-700 transition-colors dark:text-white md:border-0 md:p-0 md:hover:bg-transparent md:dark:hover:bg-transparent md:dark:hover:text-gray-400 ${
+                  item.active ? "active text-sky-600" : ""
+                }`}>
+                {item.name}
+              </Link>
+            </NavbarItem>
+          ))}
+        </NavbarContent>
+        <NavbarContent>
+          <NavbarItem className="ml-2">
+            <DarkModeSwitch
+              checked={ctxTheme?.theme === "dark" ? true : false}
+              onChange={handleToogleTheme}
+              moonColor="rgb(245, 158, 11)"
+              sunColor="#001219"
+              size={22}
+            />
+          </NavbarItem>
+          <NavbarItem className="sm:hidden">
+            <NavbarMenuToggle
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              className="h-5"
+            />
+          </NavbarItem>
+        </NavbarContent>
       </div>
-    </header>
+      <NavbarMenu className="pt-4">
+        {linkItems.map((item, index) => (
+          <NavbarMenuItem key={`mobile-${index}`}>
+            <Link
+              href={item.href}
+              className={`u-link-underline u-link-underline-black rounded text-sm font-medium text-gray-700 transition-colors dark:text-white md:border-0 md:p-0 md:hover:bg-transparent md:dark:hover:bg-transparent md:dark:hover:text-gray-400 ${
+                item.active ? "active text-sky-600" : ""
+              }`}>
+              {item.name}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
+    </Navbar>
   );
 };
 

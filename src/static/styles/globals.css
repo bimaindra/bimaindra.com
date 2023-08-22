@@ -18,7 +18,7 @@ main {
 }
 
 a {
-  @apply text-wd-dark transition-colors duration-150 hover:text-sky-600;
+  @apply text-wd-dark duration-150 transition-colors hover:text-sky-600;
 }
 
 .container {
@@ -63,9 +63,8 @@ a {
   }
 }
 
-.c-header:hover .emoji-logo {
-  transform: scale(100%);
-  animation: 0.75s ease-out 0.25s logo;
+.c-navbar header {
+  @apply px-4;
 }
 
 @keyframes hands {

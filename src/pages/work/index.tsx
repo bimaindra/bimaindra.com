@@ -2,7 +2,6 @@ import Head from "next/head";
 import { useFetchPortfolios } from "@/hooks/useFetch";
 import UnderDev from "@/components/UnderDev";
 import { formatDate } from "@/utils/formatDate";
-import { IconCalendar } from "@/components/Icon";
 import CardProject from "@/components/CardProject";
 
 export const getStaticProps = async () => {
@@ -33,7 +32,7 @@ const Work = ({ portfolios }: { portfolios: any }) => {
               <h1>Works</h1>
               <p>Recent works and projects.</p>
             </div>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-2">
               {portfolios ? (
                 portfolios.map((portfolio: any) => (
                   <CardProject
@@ -43,6 +42,11 @@ const Work = ({ portfolios }: { portfolios: any }) => {
                     date={formatDate(portfolio.date, true)}
                     url={portfolio.url}
                     stacks={portfolio.techStack}
+                    image={
+                      portfolio.image !== null
+                        ? portfolio.image.url
+                        : `https://placehold.co/600x340/webp/?text=${portfolio.title}&font=montserrat`
+                    }
                   />
                 ))
               ) : (

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
+import NextImage from "next/image";
+import { Image } from "@nextui-org/react";
 import { ArticleDetailProps } from "@/types";
 import { IconCalendar, IconPencil } from "../Icon";
 
@@ -60,17 +61,16 @@ const ArticleDetail = ({
         <div className="container">
           <div className="prose mx-auto dark:prose-invert md:prose-base md:max-w-screen-sm lg:max-w-screen-md">
             {image && (
-              <div className="aspect-w-16 aspect-h-9 relative mb-6 md:mb-8">
+              <div className="relative mb-6 md:mb-8">
                 <Image
+                  as={NextImage}
+                  isBlurred
                   className="!m-0 h-full w-full rounded-lg object-cover"
                   src={image}
                   alt={title}
-                  fill
-                  sizes="100vw"
+                  width={1600}
+                  height={900}
                   priority
-                  style={{
-                    objectFit: "cover",
-                  }}
                 />
               </div>
             )}

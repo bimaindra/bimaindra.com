@@ -1,5 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
+import NextImage from "next/image";
+import { Image } from "@nextui-org/react";
 import { BlogCardProps } from "@/types";
 import { IconCalendar, IconPencil } from "../Icon";
 
@@ -14,15 +15,19 @@ const BlogCard = ({
   return (
     <Link
       href={slug}
-      className="group flex flex-col items-center rounded-lg border border-gray-200 bg-white shadow-lg transition duration-200 hover:bg-gray-100 hover:shadow-sm dark:border-slate-700 dark:bg-slate-700 dark:hover:bg-slate-800 md:flex-row">
+      className="group flex flex-col items-center overflow-hidden rounded-lg border border-gray-200 bg-white shadow-lg duration-200 transition hover:bg-gray-100 hover:shadow-sm dark:border-slate-700 dark:bg-slate-700 dark:hover:bg-slate-800 md:flex-row">
       {image && (
-        <Image
-          className="aspect-video h-full w-full rounded-t-lg object-cover grayscale transition duration-200 group-hover:grayscale-0 md:w-56 md:rounded-none md:rounded-l-lg"
-          src={image}
-          alt={title}
-          width={200}
-          height={200}
-        />
+        <div className="flex aspect-video h-full w-full md:w-56">
+          <Image
+            as={NextImage}
+            className="h-full rounded-t-lg object-cover grayscale duration-200 transition group-hover:grayscale-0 md:rounded-none md:rounded-l-lg"
+            src={image}
+            alt={title}
+            width={500}
+            height={500}
+            radius="none"
+          />
+        </div>
       )}
       <div
         className={`flex flex-col justify-between p-4 leading-normal ${

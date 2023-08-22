@@ -62,4 +62,5 @@ export type CardProjectProps = {
   date?: string;
   url: string;
   stacks: string[];
+  image: string;
 };
