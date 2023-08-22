@@ -8,7 +8,8 @@ module.exports = withBundleAnalyzer({
   reactStrictMode: false,
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: ["media.graphassets.com", "picsum.photos"],
+    domains: ["media.graphassets.com", "picsum.photos", "placehold.co"],
+    unoptimized: true,
   },
   webpack(config, options) {
     config.module.rules.push({
