@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { HeroProps } from "@/types";
 import Button from "@/components/Button";
-import waveEmoji from "@/static/images/waving-hand.png";
+import waveEmoji from "@/assets/images/waving-hand.png";
 
 const Hero = ({ link, gtm }: HeroProps) => {
   const [isFirstVisit, setIsFirstVisit] = useState<Boolean>(true);

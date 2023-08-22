@@ -8,7 +8,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import { FontDefault } from "@/constants/config";
 import { GTM_ID, pageview } from "@/constants/gtm";
 import { meta } from "@/constants/seo";
-import "@/static/styles/globals.css";
+import "@/assets/styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();

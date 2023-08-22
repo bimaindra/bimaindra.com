@@ -13,9 +13,9 @@ import {
 } from "@nextui-org/react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { ThemeContext } from "@/context/ThemeContext";
-import Profpic from "@/static/images/profpic.jpg";
+import Profpic from "@/assets/images/profpic.jpg";
 import useSound from "use-sound";
-import soundUrl from "@/static/sounds/lamp.mp3";
+import soundUrl from "@/assets/sounds/lamp.mp3";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean | undefined>(false);
@@ -86,7 +86,7 @@ const Header = () => {
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="c-navbar fixed left-0 right-0 top-0 z-50 mx-auto rounded-sm shadow-lg sm:max-w-screen-sm md:mt-4 lg:max-w-screen-md sm:rounded-xl">
+      className="c-navbar fixed left-0 right-0 top-0 z-50 mx-auto rounded-sm shadow-lg sm:max-w-screen-sm sm:rounded-xl md:mt-4 lg:max-w-screen-md">
       <NavbarContent>
         <NavbarBrand>
           <Link
