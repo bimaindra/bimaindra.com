@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Script from "next/script";
 import Layout from "@/components/Layout";
+import { NextUIProvider } from "@nextui-org/react";
 import { FontDefault } from "@/constants/config";
 import { GTM_ID, pageview } from "@/constants/gtm";
 import { meta } from "@/constants/seo";
@@ -90,9 +91,11 @@ export default function App({ Component, pageProps }: AppProps) {
       />
       <div
         className={`${FontDefault.className} text-wd-dark dark:bg-slate-600 dark:text-wd-light`}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <NextUIProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </NextUIProvider>
       </div>
     </>
   );
