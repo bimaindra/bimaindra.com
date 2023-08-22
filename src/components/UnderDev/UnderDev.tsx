@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { UnderDevProps } from "@/types";
+import { UnderDevPropsType } from "@/types";
 import Winking from "@/assets/images/winking-face.png";
 
-const UnderDev = ({ status = "dev" }: UnderDevProps) => {
+const UnderDev = ({ status = "dev" }: UnderDevPropsType) => {
   return (
     <div className="lg:w/1/2 absolute top-1/2 left-4 right-4 mx-auto flex -translate-y-1/2 flex-col items-center gap-4 text-center md:max-w-screen-lg">
       {status === "notfound" ? (

@@ -1,9 +1,9 @@
-import { ChildrenProps } from "@/types";
+import { ChildrenPropsType } from "@/types";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { ThemeContextProvider } from "@/context/ThemeContext";
 
-const Layout = ({ children }: ChildrenProps) => {
+const Layout = ({ children }: ChildrenPropsType) => {
   return (
     <>
       <ThemeContextProvider>

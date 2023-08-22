@@ -8,7 +8,7 @@ import {
   Link,
   Image,
 } from "@nextui-org/react";
-import { CardProjectProps } from "@/types";
+import { CardProjectPropsType } from "@/types";
 import { IconCalendar } from "../Icon";
 
 const CardProject = ({
@@ -18,7 +18,7 @@ const CardProject = ({
   url,
   stacks,
   image,
-}: CardProjectProps) => {
+}: CardProjectPropsType) => {
   return (
     <Card className="hover:border- group">
       <CardHeader className="flex-col overflow-hidden p-0">

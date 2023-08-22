@@ -1,5 +1,5 @@
 import { motion, Variants } from "framer-motion";
-import { TimelineProps } from "@/types";
+import { TimelinePropsType } from "@/types";
 import { IconCalendar, IconGraduate, IconLocation, IconWork } from "../Icon";
 import { formatDate } from "@/utils/formatDate";
 
@@ -19,7 +19,7 @@ const cardVariants: Variants = {
   },
 };
 
-const Timeline = ({ timeline }: TimelineProps) => {
+const Timeline = ({ timeline }: TimelinePropsType) => {
   return (
     <ol className="relative ml-4 whitespace-normal break-words border-l border-gray-200 before:absolute before:top-0 before:-left-[4.5px] before:h-2 before:w-2 before:rounded-md before:bg-gray-200 after:absolute after:bottom-0 after:-left-[4.5px] after:h-2 after:w-2 after:rounded-md after:bg-gray-200 dark:border-white">
       {timeline.map((item, index) => {

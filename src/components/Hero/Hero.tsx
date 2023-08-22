@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import { HeroProps } from "@/types";
+import { HeroPropsType } from "@/types";
 import Button from "@/components/Button";
 import waveEmoji from "@/assets/images/waving-hand.png";
 
-const Hero = ({ link, gtm }: HeroProps) => {
+const Hero = ({ link, gtm }: HeroPropsType) => {
   const [isFirstVisit, setIsFirstVisit] = useState<Boolean>(true);
 
   const handleFirstVisit = () => {

@@ -2,7 +2,7 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import { useFetchPosts } from "@/hooks/useFetch";
 import { formatDate } from "@/utils/formatDate";
-import BlogCard from "@/components/BlogCard";
+import CardBlog from "@/components/CardBlog";
 
 export const getStaticProps: GetStaticProps = async () => {
   const { posts } = await useFetchPosts();
@@ -35,7 +35,7 @@ const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
             <div className="mt-8 grid gap-6 md:gap-10 lg:mt-12">
               {posts.map((post: any) => {
                 return (
-                  <BlogCard
+                  <CardBlog
                     key={post.id}
                     title={post.title}
                     author={post.author ? post.author.name : "Bima Indra"}

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import NextImage from "next/image";
 import { Image } from "@nextui-org/react";
-import { BlogCardProps } from "@/types";
+import { CardBlogPropsType } from "@/types";
 import { IconCalendar, IconPencil } from "../Icon";
 
 const BlogCard = ({
@@ -11,7 +11,7 @@ const BlogCard = ({
   slug,
   author,
   image,
-}: BlogCardProps) => {
+}: CardBlogPropsType) => {
   return (
     <Link
       href={slug}

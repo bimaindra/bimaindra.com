@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import NextImage from "next/image";
 import { Image } from "@nextui-org/react";
-import { ArticleDetailProps } from "@/types";
+import { ArticleDetailPropsType } from "@/types";
 import { IconCalendar, IconPencil } from "../Icon";
 
 const ArticleDetail = ({
@@ -13,7 +13,7 @@ const ArticleDetail = ({
   author,
   image,
   tags,
-}: ArticleDetailProps) => {
+}: ArticleDetailPropsType) => {
   const [currentUrl, setCurrentUrl] = useState("");
 
   useEffect(() => {

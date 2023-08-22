@@ -1,4 +1,4 @@
-export type TypePosts = {
+export type PostType = {
   id: string | number;
   title: string;
   slug: string;
@@ -12,24 +12,24 @@ export type TypePosts = {
   };
 };
 
-export type ChildrenProps = {
+export type ChildrenPropsType = {
   children: React.ReactNode;
 };
 
-export type HeroProps = {
+export type HeroPropsType = {
   link: string;
   gtm?: string;
 };
 
-export type TimelineProps = {
+export type TimelinePropsType = {
   timeline: any[];
 };
 
-export type UnderDevProps = {
+export type UnderDevPropsType = {
   status?: string;
 };
 
-export type ButtonProps = {
+export type ButtonPropsType = {
   type: string;
   href: string;
   text: string;
@@ -37,7 +37,7 @@ export type ButtonProps = {
   theme?: string;
 };
 
-export type ArticleDetailProps = {
+export type ArticleDetailPropsType = {
   title: string;
   description: string;
   content: string;
@@ -47,7 +47,7 @@ export type ArticleDetailProps = {
   tags?: string[] | any;
 };
 
-export type BlogCardProps = {
+export type CardBlogPropsType = {
   title: string;
   description: string;
   date?: string;
@@ -56,7 +56,7 @@ export type BlogCardProps = {
   image?: string;
 };
 
-export type CardProjectProps = {
+export type CardProjectPropsType = {
   title: string;
   excerpt: string;
   date?: string;

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Button } from "@nextui-org/react";
-import { ButtonProps } from "@/types";
+import { ButtonPropsType } from "@/types";
 
-const ButtonComp = ({ type = "button", href, text, gtm }: ButtonProps) => {
+const ButtonComp = ({ type = "button", href, text, gtm }: ButtonPropsType) => {
   return (
     <>
       {type === "button" ? (
