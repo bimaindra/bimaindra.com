@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { HeroPropsType } from "@/types";
 import Button from "@/components/Button";
-import waveEmoji from "@/assets/images/waving-hand.png";
+import waveEmoji from "@/assets/images/waving-hand.webp";
 
 const Hero = ({ link, gtm }: HeroPropsType) => {
   const [isFirstVisit, setIsFirstVisit] = useState<Boolean>(true);
@@ -38,8 +38,8 @@ const Hero = ({ link, gtm }: HeroPropsType) => {
                     <Image
                       src={waveEmoji}
                       alt="Hola!"
-                      width="256"
-                      height="256"
+                      width={64}
+                      height={64}
                       className="emoji-hand h-10 w-10 md:h-14 md:w-14 lg:h-16 lg:w-16"
                     />
                   </motion.div>
@@ -55,8 +55,8 @@ const Hero = ({ link, gtm }: HeroPropsType) => {
                   <Image
                     src={waveEmoji}
                     alt="Hola!"
-                    width="256"
-                    height="256"
+                    width={64}
+                    height={64}
                     className="emoji-hand h-10 w-10 md:h-14 md:w-14 lg:h-16 lg:w-16"
                   />{" "}
                   Hola, I'm Bima

@@ -13,7 +13,7 @@ import {
 } from "@nextui-org/react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { ThemeContext } from "@/context/ThemeContext";
-import Profpic from "@/assets/images/profpic.jpg";
+import Profpic from "@/assets/images/profpic.webp";
 import useSound from "use-sound";
 import soundUrl from "@/assets/sounds/lamp.mp3";
 
@@ -88,21 +88,23 @@ const Header = () => {
       onMenuOpenChange={setIsMenuOpen}
       className="c-navbar fixed left-0 right-0 top-0 z-50 mx-auto rounded-sm shadow-lg sm:max-w-screen-sm sm:rounded-xl md:mt-4 lg:max-w-screen-md">
       <NavbarContent>
-        <NavbarBrand>
-          <Link
-            href="/"
-            className="group relative text-gray-700 dark:text-white">
-            <div className="h-8 w-8 overflow-hidden rounded-full border-2 border-sky-600 transition-colors group-hover:border-sky-600 md:h-10 md:w-10 lg:border-slate-400 lg:group-hover:border-dashed">
-              <Image
-                src={Profpic}
-                alt="Bima Indra Mulya"
-                width={40}
-                height={40}
-                className="object-cover transition-transform group-hover:scale-125 group-hover:grayscale-0 lg:grayscale"
-              />
-            </div>
-          </Link>
-        </NavbarBrand>
+        <NavbarItem>
+          <NavbarBrand>
+            <Link
+              href="/"
+              className="group relative text-gray-700 dark:text-white">
+              <div className="h-8 w-8 overflow-hidden rounded-full border-2 border-sky-600 transition-colors group-hover:border-sky-600 md:h-10 md:w-10 lg:border-slate-400 lg:group-hover:border-dashed">
+                <Image
+                  src={Profpic}
+                  alt="Bima Indra Mulya"
+                  width={36}
+                  height={36}
+                  className="object-cover transition-transform group-hover:scale-125 group-hover:grayscale-0 lg:grayscale"
+                />
+              </div>
+            </Link>
+          </NavbarBrand>
+        </NavbarItem>
       </NavbarContent>
       <div className="flex items-center gap-6">
         <NavbarContent className="hidden gap-4 sm:flex" justify="end">

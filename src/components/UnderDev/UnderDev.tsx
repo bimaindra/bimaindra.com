@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { UnderDevPropsType } from "@/types";
-import Winking from "@/assets/images/winking-face.png";
+import Winking from "@/assets/images/winking-face.webp";
 
 const UnderDev = ({ status = "dev" }: UnderDevPropsType) => {
   return (

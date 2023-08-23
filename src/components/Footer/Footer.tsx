@@ -29,12 +29,14 @@ const Footer = () => {
               href="http://github.com/bimaindra"
               target="_blank"
               className="dark:text-white">
+              <span className="hidden">GitHub</span>
               <IconGithub />
             </Link>
             <Link
               href="http://twitter.com/bimaindraa"
               target="_blank"
               className="dark:text-white">
+              <span className="hidden">Twitter</span>
               <IconTwitter />
             </Link>
           </div>
