@@ -77,8 +77,8 @@ export const queryGetTimeline = gql`
   }
 `;
 
-export const queryPortfolios = gql`
-  query QueryPortfolios {
+export const queryGetPortfolios = gql`
+  query queryGetPortfolios {
     portfolios(orderBy: date_DESC) {
       id
       description {
