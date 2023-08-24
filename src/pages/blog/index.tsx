@@ -29,7 +29,7 @@ const Blog = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
         <div className="container">
           <div className="mx-auto md:max-w-screen-sm lg:max-w-screen-md">
             <div className="prose dark:prose-invert md:prose-base">
-              <h1>Blog</h1>
+              <h1>✍🏼 Blog</h1>
               <p>Mostly I used to write in Bahasa 🇮🇩.</p>
             </div>
             <div className="mt-8 grid gap-6 md:gap-10 lg:mt-12">

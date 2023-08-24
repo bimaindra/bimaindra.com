@@ -3,7 +3,7 @@ import { IconGithub, IconTwitter } from "../Icon";
 
 const Footer = () => {
   return (
-    <footer className="py-6 shadow-slate-200 dark:bg-slate-800 md:pt-8">
+    <footer className="py-6 shadow-slate-200 dark:bg-slate-600 md:pt-8">
       <div className="container sm:max-w-screen-sm lg:max-w-screen-md">
         <div className="flex justify-between text-sm">
           <div className="flex items-center divide-x">
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
         <hr className="my-4 h-px border-0 bg-gray-200" />
         <p className="text-center text-xs dark:text-white">
-          <span>&copy; 2019 - present | Bima Indra Mulya.</span>
+          <span>&copy; 2023 | Bima Indra Mulya.</span>
         </p>
       </div>
     </footer>

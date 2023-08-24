@@ -6,6 +6,21 @@ import { HeroPropsType } from "@/types";
 import Button from "@/components/Button";
 import waveEmoji from "@/assets/images/waving-hand.webp";
 
+const ImageWave = () => {
+  return (
+    <>
+      <Image
+        src={waveEmoji}
+        alt="Hola!"
+        width={64}
+        height={64}
+        className="emoji-hand h-16 w-16"
+        priority
+      />
+    </>
+  );
+};
+
 const Hero = ({ link, gtm }: HeroPropsType) => {
   const [isFirstVisit, setIsFirstVisit] = useState<Boolean>(true);
 
@@ -35,13 +50,7 @@ const Hero = ({ link, gtm }: HeroPropsType) => {
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
                     viewport={{ once: true }}>
-                    <Image
-                      src={waveEmoji}
-                      alt="Hola!"
-                      width={64}
-                      height={64}
-                      className="emoji-hand h-10 w-10 md:h-14 md:w-14 lg:h-16 lg:w-16"
-                    />
+                    <ImageWave />
                   </motion.div>
                   <TypeAnimation
                     sequence={[500, "Hola,", 1000, `Hola, I'm Bima.`]}
@@ -52,14 +61,7 @@ const Hero = ({ link, gtm }: HeroPropsType) => {
                 </>
               ) : (
                 <>
-                  <Image
-                    src={waveEmoji}
-                    alt="Hola!"
-                    width={64}
-                    height={64}
-                    className="emoji-hand h-10 w-10 md:h-14 md:w-14 lg:h-16 lg:w-16"
-                  />{" "}
-                  Hola, I'm Bima
+                  <ImageWave /> Hola, I'm Bima
                 </>
               )}
             </h1>

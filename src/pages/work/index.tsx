@@ -29,7 +29,7 @@ const Work = ({ portfolios }: { portfolios: any }) => {
         <div className="container">
           <div className="mx-auto md:max-w-screen-sm lg:max-w-screen-md">
             <div className="prose mb-8 dark:prose-invert md:prose-base lg:mb-12">
-              <h1>Works</h1>
+              <h1>👨🏻‍💻 Works</h1>
               <p>Recent works and projects.</p>
             </div>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-2">

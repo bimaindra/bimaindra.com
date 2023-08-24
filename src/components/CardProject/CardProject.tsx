@@ -20,16 +20,19 @@ const CardProject = ({
   image,
 }: CardProjectPropsType) => {
   return (
-    <Card className="hover:border- group">
+    <Card className="group dark:bg-slate-700">
       <CardHeader className="flex-col overflow-hidden p-0">
         <Image
           as={NextImage}
-          alt={title}
           src={image}
-          width={600}
-          height={340}
+          alt={title}
+          width={372}
+          height={211}
           radius="none"
-          className="grayscale-[60%] group-hover:scale-[1.015] group-hover:grayscale-0"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          quality={75}
+          loading="lazy"
+          className="object-cover grayscale-[60%] group-hover:scale-[1.015] group-hover:grayscale-0"
         />
       </CardHeader>
       <Divider />
@@ -57,7 +60,11 @@ const CardProject = ({
             </span>
             <b className="mt-0.5">{date}</b>
           </p>
-          <Link className="text-sm" showAnchorIcon href={url} target="_blank">
+          <Link
+            className="text-sm dark:text-white"
+            showAnchorIcon
+            href={url}
+            target="_blank">
             Visit website.
           </Link>
         </div>

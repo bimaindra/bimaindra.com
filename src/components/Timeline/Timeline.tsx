@@ -31,7 +31,7 @@ const Timeline = ({ timeline }: TimelinePropsType) => {
             viewport={{ once: true, amount: 0 }}
             variants={cardVariants}
             className="relative mb-12 ml-9 last:mb-0 lg:mb-16 lg:ml-10">
-            <span className="absolute -left-12 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 ring-8 ring-slate-200 dark:bg-slate-600 dark:ring-slate-600 lg:-left-[56px] lg:h-7 lg:w-7">
+            <span className="absolute -left-12 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 ring-8 ring-slate-200 dark:bg-slate-500 dark:ring-slate-500 lg:-left-[56px] lg:h-7 lg:w-7">
               {item.type === "education" ? (
                 <>
                   <IconGraduate />

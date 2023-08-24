@@ -1,5 +1,6 @@
 import { useEffect, useContext, useState } from "react";
 import Image from "next/image";
+import NextLink from "next/link";
 import { useRouter } from "next/router";
 import {
   Navbar,
@@ -86,11 +87,12 @@ const Header = () => {
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="c-navbar fixed left-0 right-0 top-0 z-50 mx-auto rounded-sm shadow-lg sm:max-w-screen-sm sm:rounded-xl md:mt-4 lg:max-w-screen-md">
+      className="c-navbar fixed left-0 right-0 top-0 z-50 mx-auto rounded-sm shadow-lg dark:bg-slate-800 sm:max-w-screen-sm sm:rounded-xl md:mt-4 lg:max-w-screen-md">
       <NavbarContent>
         <NavbarItem>
           <NavbarBrand>
             <Link
+              as={NextLink}
               href="/"
               className="group relative text-gray-700 dark:text-white">
               <div className="h-8 w-8 overflow-hidden rounded-full border-2 border-sky-600 transition-colors group-hover:border-sky-600 md:h-10 md:w-10 lg:border-slate-400 lg:group-hover:border-dashed">
@@ -111,6 +113,7 @@ const Header = () => {
           {linkItems.map((item, index) => (
             <NavbarItem key={`desktop-${index}`}>
               <Link
+                as={NextLink}
                 href={item.href}
                 className={`u-link-underline u-link-underline-black block rounded text-sm font-medium text-gray-700 transition-colors dark:text-white md:border-0 md:p-0 md:hover:bg-transparent md:dark:hover:bg-transparent md:dark:hover:text-gray-400 ${
                   item.active ? "active text-sky-600" : ""
@@ -142,6 +145,7 @@ const Header = () => {
         {linkItems.map((item, index) => (
           <NavbarMenuItem key={`mobile-${index}`}>
             <Link
+              as={NextLink}
               href={item.href}
               className={`u-link-underline u-link-underline-black rounded text-sm font-medium text-gray-700 transition-colors dark:text-white md:border-0 md:p-0 md:hover:bg-transparent md:dark:hover:bg-transparent md:dark:hover:text-gray-400 ${
                 item.active ? "active text-sky-600" : ""
