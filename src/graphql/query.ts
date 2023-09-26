@@ -66,7 +66,7 @@ export const queryGetPage = gql`
 
 export const queryGetTimeline = gql`
   query QueryTimeline {
-    timelines {
+    timelines(orderBy: date_DESC) {
       id
       title
       description
