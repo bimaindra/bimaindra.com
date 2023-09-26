@@ -3,9 +3,12 @@ import { motion } from "framer-motion";
 import Hero from "@/components/Hero";
 import Timeline from "@/components/Timeline";
 import { graphql, queryGetTimeline } from "@/graphql/query";
+import { TimelinesPropsType } from "@/types";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { timelines } = await graphql.request(queryGetTimeline);
+  const { timelines } = await graphql.request<TimelinesPropsType>(
+    queryGetTimeline
+  );
 
   return {
     props: {
@@ -36,7 +39,7 @@ export default function Home({
                 Timeline
               </span>
             </motion.h2>
-            <Timeline timeline={timelines} />
+            <Timeline timelines={timelines} />
           </div>
         </div>
       </section>

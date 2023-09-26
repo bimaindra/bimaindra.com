@@ -12,6 +12,16 @@ export type PostType = {
   };
 };
 
+export type TimelineProps = {
+  id: string | number;
+  title: string;
+  description: string;
+  location: string;
+  date: string;
+  endDate: string;
+  type: string;
+};
+
 export type ChildrenPropsType = {
   children: React.ReactNode;
 };
@@ -21,8 +31,8 @@ export type HeroPropsType = {
   gtm?: string;
 };
 
-export type TimelinePropsType = {
-  timeline: any[];
+export type TimelinesPropsType = {
+  timelines: TimelineProps[];
 };
 
 export type UnderDevPropsType = {

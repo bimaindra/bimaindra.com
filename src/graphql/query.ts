@@ -72,6 +72,7 @@ export const queryGetTimeline = gql`
       description
       location
       date
+      endDate
       type
     }
   }

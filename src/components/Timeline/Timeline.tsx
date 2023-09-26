@@ -1,5 +1,5 @@
 import { motion, Variants } from "framer-motion";
-import { TimelinePropsType } from "@/types";
+import { TimelinesPropsType } from "@/types";
 import { IconCalendar, IconGraduate, IconLocation, IconWork } from "../Icon";
 import { formatDate } from "@/utils/formatDate";
 
@@ -19,10 +19,10 @@ const cardVariants: Variants = {
   },
 };
 
-const Timeline = ({ timeline }: TimelinePropsType) => {
+const Timeline = ({ timelines }: TimelinesPropsType) => {
   return (
-    <ol className="relative ml-4 whitespace-normal break-words border-l border-gray-200 before:absolute before:top-0 before:-left-[4.5px] before:h-2 before:w-2 before:rounded-md before:bg-gray-200 after:absolute after:bottom-0 after:-left-[4.5px] after:h-2 after:w-2 after:rounded-md after:bg-gray-200 dark:border-white">
-      {timeline.map((item, index) => {
+    <ol className="relative ml-4 whitespace-normal break-words border-l border-gray-200 before:absolute before:-left-[4.5px] before:top-0 before:h-2 before:w-2 before:rounded-md before:bg-gray-200 after:absolute after:-left-[4.5px] after:bottom-0 after:h-2 after:w-2 after:rounded-md after:bg-gray-200 dark:border-white">
+      {timelines.map((item, index) => {
         return (
           <motion.li
             key={index}
@@ -45,7 +45,7 @@ const Timeline = ({ timeline }: TimelinePropsType) => {
             <h3 className="mb-2 flex items-center text-lg font-medium text-gray-900 dark:text-slate-200 lg:text-xl">
               {item.title}
               {index === 0 ? (
-                <span className="mr-2 ml-3 rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800 dark:bg-blue-200 dark:text-blue-800">
+                <span className="ml-3 mr-2 rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-800 dark:bg-blue-200 dark:text-blue-800">
                   Latest
                 </span>
               ) : (
@@ -54,7 +54,13 @@ const Timeline = ({ timeline }: TimelinePropsType) => {
             </h3>
             <time className="mb-2 flex items-center gap-x-2 text-sm leading-none text-gray-800 dark:text-slate-200 md:text-sm">
               <IconCalendar />
-              <span>{formatDate(item.date)}</span>
+              {item.type === "jobs" ? (
+                <span>{`${formatDate(item.date)} - ${
+                  item.endDate === null ? "Now" : formatDate(item.endDate)
+                }`}</span>
+              ) : (
+                <span>{formatDate(item.endDate)}</span>
+              )}
             </time>
             <span className="mb-2 flex items-center gap-x-2 text-sm leading-none text-gray-800 dark:text-slate-200 md:text-sm">
               <IconLocation />
