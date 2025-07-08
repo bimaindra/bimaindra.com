@@ -1,16 +1,21 @@
-import { ChildrenPropsType } from "@/types";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import { ThemeContextProvider } from "@/context/ThemeContext";
+'use client';
+
+import { ChildrenPropsType } from '@/types/components';
+import Footer from '@/components/footer';
+import Header from '@/components/header';
+import { HeroUIProvider } from '@heroui/react';
+import { ThemeContextProvider } from '@/context/ThemeContext';
 
 const Layout = ({ children }: ChildrenPropsType) => {
   return (
     <>
-      <ThemeContextProvider>
-        <Header />
-      </ThemeContextProvider>
-      <main>{children}</main>
-      <Footer />
+      <HeroUIProvider>
+        <ThemeContextProvider>
+          <Header />
+        </ThemeContextProvider>
+        <main>{children}</main>
+        <Footer />
+      </HeroUIProvider>
     </>
   );
 };

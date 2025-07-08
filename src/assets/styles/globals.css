@@ -7,7 +7,7 @@ html {
 }
 
 main {
-  min-height: calc(100vh - 101px); /* calculate based on footer height */
+  min-height: calc(100vh - 125px); /* calculate based on footer height */
   padding-top: 56px; /* calculate based on header-nav height */
 }
 
@@ -18,7 +18,7 @@ main {
 }
 
 a {
-  @apply text-wd-dark duration-150 transition-colors hover:text-sky-600;
+  @apply text-wd-dark transition-colors duration-150 hover:text-sky-600;
 }
 
 .container {
@@ -31,20 +31,20 @@ a {
 
 .u-link-underline {
   @apply border-b-0 bg-[length:0_3px] bg-no-repeat;
-  background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#fff, #fff);
+  background-image:
+    linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
   background-position: 0 100%;
   transition: background-size 0.15s ease-in-out;
 }
 
 .u-link-underline-black {
-  background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#0284c7, #0284c7);
+  background-image:
+    linear-gradient(transparent, transparent), linear-gradient(#0284c7, #0284c7);
 }
 
 .dark .u-link-underline-black {
-  background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#ffffff, #ffffff);
+  background-image:
+    linear-gradient(transparent, transparent), linear-gradient(#ffffff, #ffffff);
 }
 
 .u-link-underline.active,
