@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getClient } from '@/config/apollo/client';
 import { GET_PAGE } from '@/config/graphql/query';
+import { GetPageResponse } from '@/types/api';
 
 export const metadata: Metadata = {
   title: 'Resources | bimaindra.com',
@@ -12,7 +13,7 @@ export default async function Resources() {
   const client = getClient();
   const {
     data: { page },
-  } = await client.query({
+  } = await client.query<GetPageResponse>({
     query: GET_PAGE,
     variables: {
       slug,

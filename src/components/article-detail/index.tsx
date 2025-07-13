@@ -23,8 +23,7 @@ const ArticleDetail = ({
               <div className="relative mb-6 md:mb-8">
                 <Image
                   as={NextImage}
-                  isBlurred
-                  className="!m-0 h-full w-full rounded-lg object-cover"
+                  className="!m-0 !h-full w-full rounded-lg object-cover"
                   src={image}
                   alt={title || description}
                   width={1600}

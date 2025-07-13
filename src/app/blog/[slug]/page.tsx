@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { formatDate } from '@/utils/format-date';
 import { getClient } from '@/config/apollo/client';
-import ArticleDetail from '@/components/article-detail';
 import { GET_ALL_SLUGS, GET_POST } from '@/config/graphql/query';
+import { GetAllSlugsResponse, GetPostResponse } from '@/types/api';
+import ArticleDetail from '@/components/article-detail';
 
 type Props = {
   params: { slug: string };
@@ -10,11 +11,11 @@ type Props = {
 
 export async function generateStaticParams() {
   const client = getClient();
-  const { data } = await client.query({
+  const { data } = await client.query<GetAllSlugsResponse>({
     query: GET_ALL_SLUGS,
   });
   const { posts } = data;
-  const slugs = posts.map((post: { slug: string }) => ({
+  const slugs = posts.map((post) => ({
     params: { slug: post.slug },
   }));
 
@@ -22,9 +23,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
   const client = getClient();
-  const { data } = await client.query({
+  const { data } = await client.query<GetPostResponse>({
     query: GET_POST,
     variables: {
       slug,
@@ -40,9 +41,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function BlogPost({ params }: Props) {
-  const { slug } = params;
+  const { slug } = await params;
   const client = getClient();
-  const { data } = await client.query({
+  const { data } = await client.query<GetPostResponse>({
     query: GET_POST,
     variables: {
       slug,

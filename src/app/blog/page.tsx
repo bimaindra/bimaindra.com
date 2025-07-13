@@ -3,6 +3,7 @@ import { formatDate } from '@/utils/format-date';
 import CardBlog from '@/components/card-blog';
 import { getClient } from '@/config/apollo/client';
 import { GET_ALL_POSTS } from '@/config/graphql/query';
+import { GetAllPostsResponse } from '@/types/api';
 
 export const metadata: Metadata = {
   title: 'Blog | bimaindra.com',
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default async function Blog() {
   const client = getClient();
-  const { data } = await client.query({
+  const { data } = await client.query<GetAllPostsResponse>({
     query: GET_ALL_POSTS,
   });
   const posts = data.posts;

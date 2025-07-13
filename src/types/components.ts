@@ -16,22 +16,8 @@ export type PostType = {
   };
 };
 
-export type TimelineProps = {
-  id: string | number;
-  title: string;
-  description: string;
-  location: string;
-  date: string;
-  endDate: string;
-  type: string;
-};
-
 export type HeroPropsType = {
   link: string;
-};
-
-export type TimelinesPropsType = {
-  timelines: TimelineProps[];
 };
 
 export type UnderDevPropsType = {

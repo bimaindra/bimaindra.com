@@ -2,7 +2,7 @@
 import * as motion from 'motion/react-client';
 import { Variants } from 'motion/react';
 import { useState } from 'react';
-import { TimelinesPropsType } from '@/types/components';
+import { GetTimelinesResponse } from '@/types/api';
 import { MdOutlineWork } from 'react-icons/md';
 import { LuGraduationCap, LuCalendarDays, LuMapPin } from 'react-icons/lu';
 
@@ -24,7 +24,7 @@ const cardVariants: Variants = {
   },
 };
 
-const Timeline = ({ timelines }: TimelinesPropsType) => {
+const Timeline = ({ timelines }: GetTimelinesResponse) => {
   const [showAll, setShowAll] = useState(false);
   const INITIAL_ITEMS_COUNT = 3;
 

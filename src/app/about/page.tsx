@@ -9,6 +9,7 @@ import {
 } from 'react-icons/fa6';
 import { getClient } from '@/config/apollo/client';
 import { GET_PAGE } from '@/config/graphql/query';
+import { GetPageResponse } from '@/types/api';
 import TitleSection from '@/components/title-section';
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default async function About() {
   const client = getClient();
   const {
     data: { page },
-  } = await client.query({
+  } = await client.query<GetPageResponse>({
     query: GET_PAGE,
     variables: {
       slug,

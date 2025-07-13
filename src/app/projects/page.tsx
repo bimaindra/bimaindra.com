@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { formatDate } from '@/utils/format-date';
-import CardProject from '@/components/card-project';
 import { getClient } from '@/config/apollo/client';
 import { GET_PORTFOLIOS } from '@/config/graphql/query';
+import { GetPortfoliosResponse } from '@/types/api';
+import CardProject from '@/components/card-project';
 
 export const metadata: Metadata = {
   title: 'Recent Projects | bimaindra.com',
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default async function Work() {
   const client = getClient();
-  const { data } = await client.query({
+  const { data } = await client.query<GetPortfoliosResponse>({
     query: GET_PORTFOLIOS,
   });
   const portfolios = data.portfolios;

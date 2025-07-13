@@ -1,8 +1,8 @@
 import Hero from '@/components/hero';
 import Timeline from '@/components/timeline';
 import { GET_TIMELINES } from '@/config/graphql/query';
-import { TimelinesPropsType } from '@/types/components';
 import { getClient } from '@/config/apollo/client';
+import { GetTimelinesResponse } from '@/types/api';
 import CardService from '@/components/card-service';
 import {
   FaCode,
@@ -53,7 +53,7 @@ export default async function Home() {
   const client = getClient();
   const {
     data: { timelines },
-  } = await client.query<TimelinesPropsType>({
+  } = await client.query<GetTimelinesResponse>({
     query: GET_TIMELINES,
   });
 

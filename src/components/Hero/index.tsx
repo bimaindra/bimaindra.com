@@ -56,8 +56,8 @@ const Hero = ({ link }: HeroPropsType) => {
                     <ImageWave />
                   </motion.div>
                   <TypeAnimation
-                    sequence={[500, 'Hola,', 1000, `Hola, I'm Bima.`]}
-                    speed={30}
+                    sequence={[500, 'Hola,', 750, `Hola, I'm Bima.`]}
+                    speed={50}
                     cursor={false}
                     wrapper="span"
                   />
@@ -76,7 +76,7 @@ const Hero = ({ link }: HeroPropsType) => {
                       3250,
                       'Web Front End Engineer from Indonesia 🇮🇩',
                     ]}
-                    speed={50}
+                    speed={60}
                     cursor={false}
                     wrapper="span"
                   />
@@ -84,7 +84,7 @@ const Hero = ({ link }: HeroPropsType) => {
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ delay: 7 }}
+                  transition={{ delay: 5.5 }}
                   viewport={{ once: true }}
                 >
                   <Button type="link" text="About" href={link} />
