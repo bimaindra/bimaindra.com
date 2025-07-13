@@ -5,10 +5,6 @@ import { GET_ALL_SLUGS, GET_POST } from '@/config/graphql/query';
 import { GetAllSlugsResponse, GetPostResponse } from '@/types/api';
 import ArticleDetail from '@/components/article-detail';
 
-type Props = {
-  params: { slug: string };
-};
-
 export async function generateStaticParams() {
   const client = getClient();
   const { data } = await client.query<GetAllSlugsResponse>({
@@ -22,7 +18,11 @@ export async function generateStaticParams() {
   return slugs;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const { slug } = await params;
   const client = getClient();
   const { data } = await client.query<GetPostResponse>({
@@ -40,7 +40,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function BlogPost({ params }: Props) {
+export default async function BlogPost({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const client = getClient();
   const { data } = await client.query<GetPostResponse>({
