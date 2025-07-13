@@ -52,7 +52,7 @@ export type ArticleDetailPropsType = {
   date?: string;
   author: string;
   image?: string;
-  tags?: string[] | any;
+  tags?: string[];
 };
 
 export type CardBlogPropsType = {

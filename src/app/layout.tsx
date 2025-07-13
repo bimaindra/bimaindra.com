@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { FontDefault } from '@/constants/general';
+import { FontDefault } from '@/config/font';
 import Layout from '@/components/layout';
 import '@/assets/styles/globals.css';
 import { ApolloWrapper } from '../config/apollo/wrapper';

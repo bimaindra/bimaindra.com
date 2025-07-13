@@ -14,7 +14,7 @@ export async function generateStaticParams() {
     query: GET_ALL_SLUGS,
   });
   const { posts } = data;
-  const slugs = posts.map((post: any) => ({
+  const slugs = posts.map((post: { slug: string }) => ({
     params: { slug: post.slug },
   }));
 

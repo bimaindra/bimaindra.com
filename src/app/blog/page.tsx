@@ -28,19 +28,29 @@ export default async function Blog() {
             <p>Mostly I used to write in Bahasa 🇮🇩.</p>
           </div>
           <div className="mt-8 grid gap-6 md:gap-10 lg:mt-12">
-            {posts.map((post: any) => {
-              return (
-                <CardBlog
-                  key={post.id}
-                  title={post.title}
-                  author={post.author ? post.author.name : 'Bima Indra'}
-                  date={formatDate(post.date)}
-                  description={post.excerpt}
-                  image={post.coverImage.url}
-                  slug={`/blog/${post.slug}`}
-                />
-              );
-            })}
+            {posts.map(
+              (post: {
+                id: string;
+                title: string;
+                date: string;
+                excerpt: string;
+                coverImage: { url: string };
+                slug: string;
+                author?: { name: string };
+              }) => {
+                return (
+                  <CardBlog
+                    key={post.id}
+                    title={post.title}
+                    author={post.author ? post.author.name : 'Bima Indra'}
+                    date={formatDate(post.date)}
+                    description={post.excerpt}
+                    image={post.coverImage.url}
+                    slug={`/blog/${post.slug}`}
+                  />
+                );
+              },
+            )}
           </div>
         </div>
       </div>

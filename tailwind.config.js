@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import typography from '@tailwindcss/typography';
+import aspectRatio from '@tailwindcss/aspect-ratio';
 import { heroui } from '@heroui/react';
 
 const config = {
@@ -35,11 +37,7 @@ const config = {
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-    heroui(),
-  ],
+  plugins: [typography, aspectRatio, heroui()],
   darkMode: 'class',
 };
 

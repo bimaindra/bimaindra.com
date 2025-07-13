@@ -24,7 +24,7 @@ const ImageWave = () => {
 };
 
 const Hero = ({ link }: HeroPropsType) => {
-  const [isFirstVisit, setIsFirstVisit] = useState<Boolean>(true);
+  const [isFirstVisit, setIsFirstVisit] = useState<boolean>(true);
 
   const handleFirstVisit = () => {
     if (sessionStorage.getItem('visited') == undefined) {
@@ -64,14 +64,13 @@ const Hero = ({ link }: HeroPropsType) => {
                 </>
               ) : (
                 <>
-                  <ImageWave /> Hola, I'm Bima
+                  <ImageWave /> Hola, I&apos;m Bima
                 </>
               )}
             </h1>
             {isFirstVisit ? (
               <>
                 <p className="mb-6 dark:text-white md:text-lg">
-                  {/*Web Front End Engineer from Indonesia <span className="ml-1">🇮🇩</span>*/}
                   <TypeAnimation
                     sequence={[
                       3250,

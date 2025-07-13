@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useContext, useState } from 'react';
+import { useEffect, useContext, useState, useCallback } from 'react';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -25,7 +25,7 @@ const Header = () => {
   const pathname = usePathname();
   const [play] = useSound('/sounds/lamp.mp3');
 
-  const handleThemeOnLoad = () => {
+  const handleThemeOnLoad = useCallback(() => {
     const root = window.document.documentElement;
     if (
       localStorage['theme'] === 'dark' ||
@@ -40,7 +40,7 @@ const Header = () => {
       root.classList.add('light');
       root.classList.remove('dark');
     }
-  };
+  }, [ctxTheme]);
 
   const handleToogleTheme = () => {
     const root = window.document.documentElement;
@@ -61,7 +61,7 @@ const Header = () => {
 
   useEffect(() => {
     handleThemeOnLoad();
-  }, []);
+  }, [handleThemeOnLoad]);
 
   const linkItems = [
     {

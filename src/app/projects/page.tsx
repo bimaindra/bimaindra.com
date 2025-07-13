@@ -16,7 +16,7 @@ export default async function Work() {
   const portfolios = data.portfolios;
 
   if (!portfolios) {
-    return <div>No posts found</div>;
+    return <div>No portfolios found</div>;
   }
 
   return (
@@ -28,21 +28,31 @@ export default async function Work() {
             <p>Recent projects.</p>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-2">
-            {portfolios.map((portfolio: any) => (
-              <CardProject
-                key={portfolio.id}
-                title={portfolio.title}
-                excerpt={portfolio.excerpt}
-                date={formatDate(portfolio.date, true)}
-                url={portfolio.url}
-                stacks={portfolio.techStack}
-                image={
-                  portfolio.image !== null
-                    ? portfolio.image.url
-                    : `https://placehold.co/600x340/webp/?text=${portfolio.title}&font=montserrat`
-                }
-              />
-            ))}
+            {portfolios.map(
+              (portfolio: {
+                id: string;
+                title: string;
+                excerpt: string;
+                date: string;
+                url: string;
+                techStack: string[];
+                image: { url: string } | null;
+              }) => (
+                <CardProject
+                  key={portfolio.id}
+                  title={portfolio.title}
+                  excerpt={portfolio.excerpt}
+                  date={formatDate(portfolio.date, true)}
+                  url={portfolio.url}
+                  stacks={portfolio.techStack}
+                  image={
+                    portfolio.image !== null
+                      ? portfolio.image.url
+                      : `https://placehold.co/600x340/webp/?text=${portfolio.title}&font=montserrat`
+                  }
+                />
+              ),
+            )}
           </div>
         </div>
       </div>

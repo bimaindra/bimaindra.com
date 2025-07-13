@@ -1,0 +1,3 @@
+pnpm lint-staged
+pnpm format-check
+pnpm ts-check
