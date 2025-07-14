@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
+import type { GetAllSlugsResponse, GetPostResponse } from '@/types/api';
 import { formatDate } from '@/utils/format-date';
 import { getClient } from '@/config/apollo/client';
 import { GET_ALL_SLUGS, GET_POST } from '@/config/graphql/query';
-import type { GetAllSlugsResponse, GetPostResponse } from '@/types/api';
 import ArticleDetail from '@/components/article-detail';
 
 export async function generateStaticParams() {

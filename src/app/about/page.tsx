@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
+  FaEnvelope,
   FaGithub,
-  FaXTwitter,
   FaInstagram,
   FaLinkedin,
-  FaEnvelope,
+  FaXTwitter,
 } from 'react-icons/fa6';
+import type { GetPageResponse } from '@/types/api';
 import { getClient } from '@/config/apollo/client';
 import { GET_PAGE } from '@/config/graphql/query';
-import type { GetPageResponse } from '@/types/api';
 import TitleSection from '@/components/title-section';
 
 export const metadata: Metadata = {

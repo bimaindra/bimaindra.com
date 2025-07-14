@@ -1,8 +1,8 @@
 'use server';
 
+import type { GetPortfoliosPaginatedResponse } from '@/types/api';
 import { getClient } from '@/config/apollo/client';
 import { GET_PORTFOLIOS_PAGINATED } from '@/config/graphql/query';
-import type { GetPortfoliosPaginatedResponse } from '@/types/api';
 
 export async function loadMoreProjectsAction(skip: number, first: number = 6) {
   try {

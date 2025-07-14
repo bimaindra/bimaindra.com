@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
+import type { GetAllPostsResponse } from '@/types/api';
 import { formatDate } from '@/utils/format-date';
-import CardBlog from '@/components/card-blog';
 import { getClient } from '@/config/apollo/client';
 import { GET_ALL_POSTS } from '@/config/graphql/query';
-import type { GetAllPostsResponse } from '@/types/api';
+import CardBlog from '@/components/card-blog';
 
 export const metadata: Metadata = {
   title: 'Blog | bimaindra.com',

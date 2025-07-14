@@ -1,10 +1,10 @@
 'use client';
 
+import { HeroUIProvider } from '@heroui/react';
 import type { ChildrenPropsType } from '@/types/components';
+import { ThemeContextProvider } from '@/context/ThemeContext';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
-import { HeroUIProvider } from '@heroui/react';
-import { ThemeContextProvider } from '@/context/ThemeContext';
 
 const Layout = ({ children }: ChildrenPropsType) => {
   return (

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FaGithub, FaXTwitter, FaLinkedin } from 'react-icons/fa6';
+import { FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

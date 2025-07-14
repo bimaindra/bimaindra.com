@@ -1,14 +1,14 @@
 'use client';
 
-import { useState, useTransition, useRef, useEffect } from 'react';
+import { useEffect, useRef, useState, useTransition } from 'react';
 import { Button } from '@heroui/react';
 import * as motion from 'motion/react-client';
-import { loadMoreProjectsAction } from '@/app/actions';
-import { formatDate } from '@/utils/format-date';
-import CardProject from '@/components/card-project';
-import { scrollToElement } from '@/hooks/useScrollToElement';
 import type { Portfolio } from '@/types/api';
 import type { LoadMoreProjectsProps } from '@/types/components';
+import { scrollToElement } from '@/hooks/useScrollToElement';
+import { formatDate } from '@/utils/format-date';
+import CardProject from '@/components/card-project';
+import { loadMoreProjectsAction } from '@/app/actions';
 
 export default function LoadMoreProjects({
   initialPortfolios,

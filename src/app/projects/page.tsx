@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
+import type { GetPortfoliosPaginatedResponse } from '@/types/api';
 import { getClient } from '@/config/apollo/client';
 import { GET_PORTFOLIOS_PAGINATED } from '@/config/graphql/query';
-import type { GetPortfoliosPaginatedResponse } from '@/types/api';
 import LoadMoreProjects from '@/components/load-more-projects';
 
 export const metadata: Metadata = {

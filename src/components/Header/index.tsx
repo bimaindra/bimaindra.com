@@ -1,23 +1,23 @@
 'use client';
 
-import { useEffect, useContext, useState, useCallback } from 'react';
+import { useCallback, useContext, useEffect, useState } from 'react';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
+  Link,
   Navbar,
-  NavbarMenu,
-  NavbarMenuItem,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
   NavbarMenuToggle,
-  Link,
 } from '@heroui/react';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import useSound from 'use-sound';
 import { ThemeContext } from '@/context/ThemeContext';
 import Profpic from '@/assets/images/profpic.webp';
-import useSound from 'use-sound';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);

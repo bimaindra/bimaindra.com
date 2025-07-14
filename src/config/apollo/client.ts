@@ -1,8 +1,8 @@
 import { HttpLink } from '@apollo/client';
 import {
-  registerApolloClient,
   ApolloClient,
   InMemoryCache,
+  registerApolloClient,
 } from '@apollo/client-integration-nextjs';
 import { API_URL } from '@/constants/general';
 

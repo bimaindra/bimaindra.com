@@ -1,10 +1,10 @@
 'use client';
 
-import Link from 'next/link';
 import NextImage from 'next/image';
+import Link from 'next/link';
 import { Image } from '@heroui/react';
-import type { CardBlogPropsType } from '@/types/components';
 import { LuCalendarDays, LuSquarePen } from 'react-icons/lu';
+import type { CardBlogPropsType } from '@/types/components';
 
 const CardBlog = ({
   title,

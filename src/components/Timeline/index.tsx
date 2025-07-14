@@ -1,13 +1,13 @@
 'use client';
-import * as motion from 'motion/react-client';
-import { Variants } from 'motion/react';
-import { useState } from 'react';
-import type { GetTimelinesResponse } from '@/types/api';
-import { MdOutlineWork } from 'react-icons/md';
-import { LuGraduationCap, LuCalendarDays, LuMapPin } from 'react-icons/lu';
 
-import { formatDate } from '@/utils/format-date';
+import { useState } from 'react';
 import { Button } from '@heroui/react';
+import { Variants } from 'motion/react';
+import * as motion from 'motion/react-client';
+import { LuCalendarDays, LuGraduationCap, LuMapPin } from 'react-icons/lu';
+import { MdOutlineWork } from 'react-icons/md';
+import type { GetTimelinesResponse } from '@/types/api';
+import { formatDate } from '@/utils/format-date';
 
 const cardVariants: Variants = {
   offscreen: {

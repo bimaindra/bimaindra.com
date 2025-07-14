@@ -2,8 +2,8 @@
 
 import NextImage from 'next/image';
 import { Image } from '@heroui/react';
-import type { ArticleDetailPropsType } from '@/types/components';
 import { LuCalendarDays, LuSquarePen } from 'react-icons/lu';
+import type { ArticleDetailPropsType } from '@/types/components';
 
 const ArticleDetail = ({
   title,

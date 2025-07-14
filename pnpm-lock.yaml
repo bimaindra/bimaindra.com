@@ -77,6 +77,9 @@ importers:
       '@tailwindcss/typography':
         specifier: 0.5.16
         version: 0.5.16(tailwindcss@3.4.17)
+      '@trivago/prettier-plugin-sort-imports':
+        specifier: ^5.2.2
+        version: 5.2.2(prettier@3.6.0)
       '@types/node':
         specifier: 24.0.3
         version: 24.0.3
@@ -109,7 +112,7 @@ importers:
         version: 3.6.0
       prettier-plugin-tailwindcss:
         specifier: 0.6.13
-        version: 0.6.13(prettier@3.6.0)
+        version: 0.6.13(@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.6.0))(prettier@3.6.0)
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17
@@ -2923,6 +2926,25 @@ packages:
         integrity: sha512-v2mrNSnMwnPJtcVqNvV0c5roGCBqeogN8jDtgtuHCphdwBasOZ17x8UV8qpHUh+u0MLfX43c0uUHKje0s+Zb0w==,
       }
 
+  '@trivago/prettier-plugin-sort-imports@5.2.2':
+    resolution:
+      {
+        integrity: sha512-fYDQA9e6yTNmA13TLVSA+WMQRc5Bn/c0EUBditUHNfMMxN7M82c38b1kEggVE3pLpZ0FwkwJkUEKMiOi52JXFA==,
+      }
+    engines: { node: '>18.12' }
+    peerDependencies:
+      '@vue/compiler-sfc': 3.x
+      prettier: 2.x - 3.x
+      prettier-plugin-svelte: 3.x
+      svelte: 4.x || 5.x
+    peerDependenciesMeta:
+      '@vue/compiler-sfc':
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+      svelte:
+        optional: true
+
   '@tybys/wasm-util@0.10.0':
     resolution:
       {
@@ -5339,6 +5361,12 @@ packages:
         integrity: sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==,
       }
 
+  javascript-natural-sort@0.7.1:
+    resolution:
+      {
+        integrity: sha512-nO6jcEfZWQXDhOiBtG2KvKyEptz7RVbpGP4vTD2hLBdmNQSsCiicO2Ioinv6UI4y9ukqnBpy+XZ9H6uLNgJTlw==,
+      }
+
   jest-environment-node@29.7.0:
     resolution:
       {
@@ -5702,6 +5730,12 @@ packages:
     resolution:
       {
         integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==,
+      }
+
+  lodash@4.17.21:
+    resolution:
+      {
+        integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==,
       }
 
   log-update@6.1.0:
@@ -10547,6 +10581,18 @@ snapshots:
 
   '@tanstack/virtual-core@3.11.3': {}
 
+  '@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.6.0)':
+    dependencies:
+      '@babel/generator': 7.28.0
+      '@babel/parser': 7.28.0
+      '@babel/traverse': 7.28.0
+      '@babel/types': 7.28.1
+      javascript-natural-sort: 0.7.1
+      lodash: 4.17.21
+      prettier: 3.6.0
+    transitivePeerDependencies:
+      - supports-color
+
   '@tybys/wasm-util@0.10.0':
     dependencies:
       tslib: 2.8.1
@@ -12125,6 +12171,8 @@ snapshots:
     optionalDependencies:
       '@pkgjs/parseargs': 0.11.0
 
+  javascript-natural-sort@0.7.1: {}
+
   jest-environment-node@29.7.0:
     dependencies:
       '@jest/environment': 29.7.0
@@ -12351,6 +12399,8 @@ snapshots:
   lodash.merge@4.6.2: {}
 
   lodash.throttle@4.1.1: {}
+
+  lodash@4.17.21: {}
 
   log-update@6.1.0:
     dependencies:
@@ -12870,9 +12920,11 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-tailwindcss@0.6.13(prettier@3.6.0):
+  prettier-plugin-tailwindcss@0.6.13(@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.6.0))(prettier@3.6.0):
     dependencies:
       prettier: 3.6.0
+    optionalDependencies:
+      '@trivago/prettier-plugin-sort-imports': 5.2.2(prettier@3.6.0)
 
   prettier@3.6.0: {}
 

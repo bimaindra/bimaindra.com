@@ -1,17 +1,17 @@
-import Hero from '@/components/hero';
-import Timeline from '@/components/timeline';
-import { GET_TIMELINES } from '@/config/graphql/query';
-import { getClient } from '@/config/apollo/client';
-import type { GetTimelinesResponse } from '@/types/api';
-import CardService from '@/components/card-service';
 import {
+  FaArrowTrendUp,
+  FaChartSimple,
   FaCode,
+  FaGears,
   FaLaptopCode,
   FaPaintbrush,
-  FaArrowTrendUp,
-  FaGears,
-  FaChartSimple,
 } from 'react-icons/fa6';
+import type { GetTimelinesResponse } from '@/types/api';
+import { getClient } from '@/config/apollo/client';
+import { GET_TIMELINES } from '@/config/graphql/query';
+import CardService from '@/components/card-service';
+import Hero from '@/components/hero';
+import Timeline from '@/components/timeline';
 import TitleSection from '@/components/title-section';
 
 const services = [

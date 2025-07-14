@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-import typography from '@tailwindcss/typography';
-import aspectRatio from '@tailwindcss/aspect-ratio';
 import { heroui } from '@heroui/react';
+import aspectRatio from '@tailwindcss/aspect-ratio';
+import typography from '@tailwindcss/typography';
 
 const config = {
   content: [

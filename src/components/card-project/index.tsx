@@ -1,18 +1,18 @@
 'use client';
 
-import NextImage from 'next/image';
 import { forwardRef } from 'react';
+import NextImage from 'next/image';
 import {
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
+  CardHeader,
   Divider,
-  Link,
   Image,
+  Link,
 } from '@heroui/react';
-import type { CardProjectPropsType } from '@/types/components';
 import { LuCalendarDays } from 'react-icons/lu';
+import type { CardProjectPropsType } from '@/types/components';
 
 const CardProject = forwardRef<HTMLDivElement, CardProjectPropsType>(
   ({ title, excerpt, date, url, stacks, image }, ref) => {
