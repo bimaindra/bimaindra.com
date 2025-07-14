@@ -1,3 +1,5 @@
+import type { Portfolio } from '@/types/api';
+
 export type ChildrenPropsType = {
   children: React.ReactNode;
 };
@@ -63,3 +65,10 @@ export type CardServicePropsType = {
   title: string;
   icon: React.ReactNode;
 };
+
+export interface LoadMoreProjectsProps {
+  initialPortfolios: Portfolio[];
+  totalCount: number;
+  itemsPerPage?: number;
+  scrollOffset?: number;
+}

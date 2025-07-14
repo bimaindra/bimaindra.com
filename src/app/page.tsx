@@ -2,7 +2,7 @@ import Hero from '@/components/hero';
 import Timeline from '@/components/timeline';
 import { GET_TIMELINES } from '@/config/graphql/query';
 import { getClient } from '@/config/apollo/client';
-import { GetTimelinesResponse } from '@/types/api';
+import type { GetTimelinesResponse } from '@/types/api';
 import CardService from '@/components/card-service';
 import {
   FaCode,

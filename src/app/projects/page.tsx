@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
-import { formatDate } from '@/utils/format-date';
 import { getClient } from '@/config/apollo/client';
-import { GET_PORTFOLIOS } from '@/config/graphql/query';
-import { GetPortfoliosResponse } from '@/types/api';
-import CardProject from '@/components/card-project';
+import { GET_PORTFOLIOS_PAGINATED } from '@/config/graphql/query';
+import type { GetPortfoliosPaginatedResponse } from '@/types/api';
+import LoadMoreProjects from '@/components/load-more-projects';
 
 export const metadata: Metadata = {
   title: 'Recent Projects | bimaindra.com',
@@ -11,13 +10,34 @@ export const metadata: Metadata = {
 
 export default async function Work() {
   const client = getClient();
-  const { data } = await client.query<GetPortfoliosResponse>({
-    query: GET_PORTFOLIOS,
+  const { data } = await client.query<GetPortfoliosPaginatedResponse>({
+    query: GET_PORTFOLIOS_PAGINATED,
+    variables: {
+      skip: 0,
+      first: 6,
+    },
   });
-  const portfolios = data.portfolios;
+  const { portfolios, portfoliosConnection } = data;
+  const totalPortfolios = portfoliosConnection.aggregate.count;
 
-  if (!portfolios) {
-    return <div>No portfolios found</div>;
+  if (!portfolios || portfolios.length === 0) {
+    return (
+      <section className="u-safe-area">
+        <div className="container">
+          <div className="mx-auto md:max-w-screen-sm lg:max-w-screen-md">
+            <div className="prose mb-8 dark:prose-invert md:prose-base lg:mb-12">
+              <h1>👨🏻‍💻 Projects</h1>
+              <p>Recent projects that I have worked on.</p>
+            </div>
+            <div className="py-8 text-center">
+              <p className="text-gray-500 dark:text-gray-400">
+                No portfolios found
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
   }
 
   return (
@@ -26,35 +46,14 @@ export default async function Work() {
         <div className="mx-auto md:max-w-screen-sm lg:max-w-screen-md">
           <div className="prose mb-8 dark:prose-invert md:prose-base lg:mb-12">
             <h1>👨🏻‍💻 Projects</h1>
-            <p>Recent projects.</p>
+            <p>Recent projects that I have worked on.</p>
           </div>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-2">
-            {portfolios.map(
-              (portfolio: {
-                id: string;
-                title: string;
-                excerpt: string;
-                date: string;
-                url: string;
-                techStack: string[];
-                image: { url: string } | null;
-              }) => (
-                <CardProject
-                  key={portfolio.id}
-                  title={portfolio.title}
-                  excerpt={portfolio.excerpt}
-                  date={formatDate(portfolio.date, true)}
-                  url={portfolio.url}
-                  stacks={portfolio.techStack}
-                  image={
-                    portfolio.image !== null
-                      ? portfolio.image.url
-                      : `https://placehold.co/600x340/webp/?text=${portfolio.title}&font=montserrat`
-                  }
-                />
-              ),
-            )}
-          </div>
+
+          <LoadMoreProjects
+            initialPortfolios={portfolios}
+            totalCount={totalPortfolios}
+            itemsPerPage={6}
+          />
         </div>
       </div>
     </section>

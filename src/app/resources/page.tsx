@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getClient } from '@/config/apollo/client';
 import { GET_PAGE } from '@/config/graphql/query';
-import { GetPageResponse } from '@/types/api';
+import type { GetPageResponse } from '@/types/api';
 
 export const metadata: Metadata = {
   title: 'Resources | bimaindra.com',

@@ -2,7 +2,7 @@
 
 import { Card, CardHeader } from '@heroui/react';
 import { motion } from 'motion/react';
-import { CardServicePropsType } from '@/types/components';
+import type { CardServicePropsType } from '@/types/components';
 
 const CardService = ({ title, icon }: CardServicePropsType) => {
   return (

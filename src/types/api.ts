@@ -99,3 +99,12 @@ export type GetTimelinesResponse = {
 export type GetPortfoliosResponse = {
   portfolios: Portfolio[];
 };
+
+export type GetPortfoliosPaginatedResponse = {
+  portfolios: Portfolio[];
+  portfoliosConnection: {
+    aggregate: {
+      count: number;
+    };
+  };
+};

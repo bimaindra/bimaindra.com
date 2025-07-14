@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@heroui/react';
-import { ButtonPropsType } from '@/types/components';
+import type { ButtonPropsType } from '@/types/components';
 
 const ButtonComp = ({ type = 'button', href, text }: ButtonPropsType) => {
   return (

@@ -2,7 +2,7 @@
 
 import NextImage from 'next/image';
 import { Image } from '@heroui/react';
-import { ArticleDetailPropsType } from '@/types/components';
+import type { ArticleDetailPropsType } from '@/types/components';
 import { LuCalendarDays, LuSquarePen } from 'react-icons/lu';
 
 const ArticleDetail = ({

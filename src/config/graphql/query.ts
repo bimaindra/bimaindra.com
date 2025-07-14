@@ -97,3 +97,31 @@ export const GET_PORTFOLIOS = gql`
     }
   }
 `;
+
+export const GET_PORTFOLIOS_PAGINATED = gql`
+  query queryGetPortfoliosPaginated($first: Int!, $skip: Int!) {
+    portfoliosConnection {
+      aggregate {
+        count
+      }
+    }
+    portfolios(orderBy: date_DESC, skip: $skip, first: $first) {
+      id
+      description {
+        html
+      }
+      slug
+      title
+      url
+      date
+      category {
+        title
+      }
+      excerpt
+      techStack
+      image {
+        url
+      }
+    }
+  }
+`;

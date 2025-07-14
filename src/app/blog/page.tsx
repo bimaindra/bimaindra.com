@@ -3,7 +3,7 @@ import { formatDate } from '@/utils/format-date';
 import CardBlog from '@/components/card-blog';
 import { getClient } from '@/config/apollo/client';
 import { GET_ALL_POSTS } from '@/config/graphql/query';
-import { GetAllPostsResponse } from '@/types/api';
+import type { GetAllPostsResponse } from '@/types/api';
 
 export const metadata: Metadata = {
   title: 'Blog | bimaindra.com',

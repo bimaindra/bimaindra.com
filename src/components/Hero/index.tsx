@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'motion/react';
-import { HeroPropsType } from '@/types/components';
+import type { HeroPropsType } from '@/types/components';
 import Button from '@/components/button';
 import waveEmoji from '@/assets/images/waving-hand.webp';
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { ChildrenPropsType } from '@/types/components';
+import type { ChildrenPropsType } from '@/types/components';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import { HeroUIProvider } from '@heroui/react';

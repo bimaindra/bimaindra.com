@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, createContext } from 'react';
-import { ChildrenPropsType } from '@/types/components';
+import type { ChildrenPropsType } from '@/types/components';
 
 type Theme = 'light' | 'dark';
 

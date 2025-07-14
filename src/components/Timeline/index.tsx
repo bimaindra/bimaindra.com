@@ -2,11 +2,12 @@
 import * as motion from 'motion/react-client';
 import { Variants } from 'motion/react';
 import { useState } from 'react';
-import { GetTimelinesResponse } from '@/types/api';
+import type { GetTimelinesResponse } from '@/types/api';
 import { MdOutlineWork } from 'react-icons/md';
 import { LuGraduationCap, LuCalendarDays, LuMapPin } from 'react-icons/lu';
 
 import { formatDate } from '@/utils/format-date';
+import { Button } from '@heroui/react';
 
 const cardVariants: Variants = {
   offscreen: {
@@ -109,14 +110,16 @@ const Timeline = ({ timelines }: GetTimelinesResponse) => {
 
       {hasMoreItems && (
         <div className="relative mt-6 text-center">
-          <motion.button
-            onClick={() => setShowAll(!showAll)}
-            className="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-blue-500 dark:hover:bg-blue-600"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {showAll ? 'Show less' : 'Show another'}
-          </motion.button>
+          <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.95 }}>
+            <Button
+              type="button"
+              color="primary"
+              variant="shadow"
+              onPress={() => setShowAll(!showAll)}
+            >
+              {showAll ? 'Show less' : 'Show another'}
+            </Button>
+          </motion.div>
         </div>
       )}
     </div>
