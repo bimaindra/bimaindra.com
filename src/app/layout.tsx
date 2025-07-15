@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { FontDefault } from '@/config/font';
-import Layout from '@/components/layout';
+import LayoutBase from '@/components/layout-base';
 import '@/assets/styles/globals.css';
 import { ApolloWrapper } from '../config/apollo/wrapper';
 
@@ -20,7 +20,7 @@ export default function RootLayout({
         className={`text-wd-dark dark:bg-slate-600 dark:text-wd-light ${FontDefault.className}`}
       >
         <ApolloWrapper>
-          <Layout>{children}</Layout>
+          <LayoutBase>{children}</LayoutBase>
         </ApolloWrapper>
       </body>
     </html>
