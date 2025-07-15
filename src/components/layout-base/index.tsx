@@ -6,7 +6,7 @@ import { ThemeContextProvider } from '@/context/ThemeContext';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 
-const Layout = ({ children }: ChildrenPropsType) => {
+const LayoutBase = ({ children }: ChildrenPropsType) => {
   return (
     <>
       <HeroUIProvider>
@@ -20,4 +20,4 @@ const Layout = ({ children }: ChildrenPropsType) => {
   );
 };
 
-export default Layout;
+export default LayoutBase;
