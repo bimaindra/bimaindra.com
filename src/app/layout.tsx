@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
+import { ApolloWrapper } from '@/config/apollo/wrapper';
 import { FontDefault } from '@/config/font';
 import LayoutBase from '@/components/layout-base';
 import '@/assets/styles/globals.css';
-import { ApolloWrapper } from '../config/apollo/wrapper';
 
 export const metadata: Metadata = {
   title: 'Bima Indra Mulya | Web Front End Engineer',
